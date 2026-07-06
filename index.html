@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCF — Monaco Capital Frank | Premium Token on Solana</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="MCF — Monaco Capital Frank">
+    <meta property="og:description" content="Premium Digital Asset on Solana. Inspired by Monaco's financial heritage.">
+    <meta property="og:image" content="https://github.com/euribank/mcf/raw/main/mcf_logo.png">
+    <meta property="og:url" content="https://goldtether.github.io/mcf/">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- ======================================================= -->
+    <!-- 1. ФОНОВОЕ ВИДЕО С ПАРАЛЛАКСОМ                           -->
+    <!-- ======================================================= -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bgVideo">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-shot-of-monaco-3184-large.mp4" type="video/mp4">
+            <source src="https://www.pexels.com/video/123456/download" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="video-glow"></div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- 2. ЧАСТИЦЫ (ПАРАЛЛАКС-ЭФФЕКТ)                          -->
+    <!-- ======================================================= -->
+    <div id="particles-js"></div>
+
+    <!-- ======================================================= -->
+    <!-- 3. ВЕРХНЯЯ БЕГУЩАЯ СТРОКА (TICKER)                      -->
+    <!-- ======================================================= -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span>🏦 MCF — MONACO CAPITAL FRANK</span>
+            <span>💰 Цена: <span id="tickerPrice">$0.0012</span></span>
+            <span>📈 <span id="tickerChange">+5.4%</span> (24ч)</span>
+            <span>🏆 Капитализация: <span id="tickerMCap">$12M</span></span>
+            <span>👥 Холдеров: <span id="tickerHolders">1,234</span></span>
+            <span>🔒 Ликвидность: <span id="tickerLiq">$500K</span></span>
+            <span>🌐 Solana Network</span>
+            <span>✨ Powered by Gold SKR</span>
+            <span>🏦 Вдохновлён Edmond de Rothschild</span>
+            <span>🇲🇨 Monaco — The Jewel of the Mediterranean</span>
+            <span>⚡ Solana — 65,000 TPS</span>
+            <span>🚀 Скоро на CoinGecko</span>
+            <span>💰 Стейкинг APY: 12%</span>
+            <span>🏆 #1 Premium Token on Solana</span>
+        </div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- 4. ПЕРЕКЛЮЧАТЕЛЬ 8 ЯЗЫКОВ                               -->
+    <!-- ======================================================= -->
+    <div class="language-selector" id="languageSelector">
+        <button class="lang-btn active" data-lang="ru" title="Русский">🇷🇺 RU</button>
+        <button class="lang-btn" data-lang="en" title="English">🇬🇧 EN</button>
+        <button class="lang-btn" data-lang="fr" title="Français">🇫🇷 FR</button>
+        <button class="lang-btn" data-lang="de" title="Deutsch">🇩🇪 DE</button>
+        <button class="lang-btn" data-lang="es" title="Español">🇪🇸 ES</button>
+        <button class="lang-btn" data-lang="it" title="Italiano">🇮🇹 IT</button>
+        <button class="lang-btn" data-lang="zh" title="中文">🇨🇳 ZH</button>
+        <button class="lang-btn" data-lang="ar" title="العربية">🇸🇦 AR</button>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- 5. ГЛАВНЫЙ ЭКРАН (HERO)                                -->
+    <!-- ======================================================= -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge" data-i18n="badge">🏦 PREMIUM TOKEN</div>
+            
+            <h1 class="hero-title">
+                <span class="title-gold" data-i18n="title">Monaco Capital Frank</span>
+                <span class="title-sub" data-i18n="subtitle">Цифровой актив нового поколения</span>
+            </h1>
+            
+            <p class="hero-description" data-i18n="description">
+                Премиальный токен на Solana, вдохновлённый финансовым наследием Монако.
+                Комиссия 0.25% направляется на развитие, маркетинг и листинги.
+            </p>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-value" data-i18n="supply">10B</span>
+                    <span class="stat-label" data-i18n="supply_label">Общая эмиссия</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-value">0.25%</span>
+                    <span class="stat-label" data-i18n="fee_label">Трансфер-фи</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-value" data-i18n="chain">Solana</span>
+                    <span class="stat-label" data-i18n="chain_label">Блокчейн</span>
+                </div>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="https://jup.ag/" target="_blank" class="btn-primary" data-i18n="buy_btn">
+                    🚀 Купить MCF
+                </a>
+                <a href="https://meteora.ag/" target="_blank" class="btn-secondary" data-i18n="liquidity_btn">
+                    💧 Добавить ликвидность
+                </a>
+                <a href="https://solscan.io/token/33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX" target="_blank" class="btn-tertiary" data-i18n="explorer_btn">
+                    🔍 Проверить токен
+                </a>
+            </div>
+            
+            <!-- Mint Address -->
+            <div class="mint-address">
+                <span data-i18n="mint_label">Mint Address:</span>
+                <code>33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX</code>
+                <button class="copy-btn" onclick="copyAddress()">📋</button>
+            </div>
+        </div>
+        
+        <div class="hero-coin">
+            <div class="coin-3d">
+                <img src="https://github.com/euribank/mcf/raw/main/mcf_logo.png" alt="MCF Coin" class="rotating-coin">
+                <div class="coin-glow"></div>
+                <div class="coin-ring"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 6. СЧЁТЧИКИ (ANIMATED COUNTERS)                        -->
+    <!-- ======================================================= -->
+    <section class="counters-section" id="counters">
+        <div class="counters-grid">
+            <div class="counter-item">
+                <div class="counter-icon">💰</div>
+                <div class="counter-number" data-target="10000000000">0</div>
+                <div class="counter-label" data-i18n="total_supply">Общая эмиссия</div>
+                <div class="counter-sub">10,000,000,000 MCF</div>
+                <div class="counter-progress"><div class="progress-bar" style="width:100%"></div></div>
+            </div>
+            
+            <div class="counter-item">
+                <div class="counter-icon">👥</div>
+                <div class="counter-number" data-target="1234">0</div>
+                <div class="counter-label" data-i18n="holders">Держателей</div>
+                <div class="counter-sub">Уникальных кошельков</div>
+                <div class="counter-progress"><div class="progress-bar" style="width:12%"></div></div>
+            </div>
+            
+            <div class="counter-item">
+                <div class="counter-icon">💧</div>
+                <div class="counter-number" data-target="500000">0</div>
+                <div class="counter-label" data-i18n="liquidity">Ликвидность</div>
+                <div class="counter-sub">$500,000 USDC</div>
+                <div class="counter-progress"><div class="progress-bar" style="width:50%"></div></div>
+            </div>
+            
+            <div class="counter-item">
+                <div class="counter-icon">📈</div>
+                <div class="counter-number" data-target="125000">0</div>
+                <div class="counter-label" data-i18n="volume">Объём за 24ч</div>
+                <div class="counter-sub">$125,432</div>
+                <div class="counter-progress"><div class="progress-bar" style="width:25%"></div></div>
+            </div>
+            
+            <div class="counter-item">
+                <div class="counter-icon">🏦</div>
+                <div class="counter-number" data-target="12">0</div>
+                <div class="counter-label" data-i18n="apy">APY стейкинга</div>
+                <div class="counter-sub">% годовых</div>
+                <div class="counter-progress"><div class="progress-bar" style="width:60%"></div></div>
+            </div>
+            
+            <div class="counter-item">
+                <div class="counter-icon">🌍</div>
+                <div class="counter-number" data-target="10000">0</div>
+                <div class="counter-label" data-i18n="community">Сообщество</div>
+                <div class="counter-sub">Активных участников</div>
+                <div class="counter-progress"><div class="progress-bar" style="width:40%"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 7. ТАЙМЕР ДО ЛИСТИНГА                                  -->
+    <!-- ======================================================= -->
+    <section class="timer-section">
+        <div class="timer-container">
+            <h2 data-i18n="timer_title">🚀 До листинга на Meteora:</h2>
+            <div class="countdown-timer" id="countdown">
+                <div class="timer-item">
+                    <span class="timer-value" id="days">00</span>
+                    <span class="timer-label" data-i18n="days">Дней</span>
+                </div>
+                <div class="timer-divider">:</div>
+                <div class="timer-item">
+                    <span class="timer-value" id="hours">12</span>
+                    <span class="timer-label" data-i18n="hours">Часов</span>
+                </div>
+                <div class="timer-divider">:</div>
+                <div class="timer-item">
+                    <span class="timer-value" id="minutes">45</span>
+                    <span class="timer-label" data-i18n="minutes">Минут</span>
+                </div>
+                <div class="timer-divider">:</div>
+                <div class="timer-item">
+                    <span class="timer-value" id="seconds">30</span>
+                    <span class="timer-label" data-i18n="seconds">Секунд</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 8. ГРАФИК ЦЕНЫ                                          -->
+    <!-- ======================================================= -->
+    <section class="chart-section">
+        <div class="chart-container">
+            <h2 data-i18n="chart_title">📊 График цены MCF</h2>
+            <canvas id="priceChart"></canvas>
+            <div class="chart-controls">
+                <button class="chart-btn active" data-period="1D">1D</button>
+                <button class="chart-btn" data-period="1W">1W</button>
+                <button class="chart-btn" data-period="1M">1M</button>
+                <button class="chart-btn" data-period="3M">3M</button>
+                <button class="chart-btn" data-period="1Y">1Y</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 9. ЭКОСИСТЕМА (CARDS)                                  -->
+    <!-- ======================================================= -->
+    <section class="ecosystem-section">
+        <h2 data-i18n="ecosystem_title">🏛️ Экосистема MCF</h2>
+        <p class="section-subtitle" data-i18n="ecosystem_sub">Вдохновлённая финансовым наследием Монако и банком Edmond de Rothschild</p>
+        
+        <div class="ecosystem-grid">
+            <div class="eco-card">
+                <div class="eco-icon">🏦</div>
+                <h3 data-i18n="private_banking">Private Banking</h3>
+                <p data-i18n="private_banking_desc">Персональный банкинг для держателей 100K+ MCF</p>
+                <a href="https://www.edmond-de-rothschild.com/" target="_blank" class="eco-link">Узнать больше →</a>
+            </div>
+            
+            <div class="eco-card">
+                <div class="eco-icon">📊</div>
+                <h3 data-i18n="wealth_management">Wealth Management</h3>
+                <p data-i18n="wealth_management_desc">Управление капиталом с AI-советником</p>
+                <a href="https://www.edmond-de-rothschild.com/" target="_blank" class="eco-link">Узнать больше →</a>
+            </div>
+            
+            <div class="eco-card">
+                <div class="eco-icon">🌱</div>
+                <h3 data-i18n="esg">ESG & Sustainability</h3>
+                <p data-i18n="esg_desc">Устойчивое развитие и социальная ответственность</p>
+                <a href="https://www.edmond-de-rothschild.com/" target="_blank" class="eco-link">Узнать больше →</a>
+            </div>
+            
+            <div class="eco-card">
+                <div class="eco-icon">🏠</div>
+                <h3 data-i18n="real_estate">Real Estate</h3>
+                <p data-i18n="real_estate_desc">Инвестиции в элитную недвижимость Монако</p>
+                <a href="https://www.montecarlosothebysir.com/" target="_blank" class="eco-link">Узнать больше →</a>
+            </div>
+            
+            <div class="eco-card">
+                <div class="eco-icon">⛵</div>
+                <h3 data-i18n="yachts">Yacht Services</h3>
+                <p data-i18n="yachts_desc">Яхты, чартеры и морские услуги</p>
+                <a href="https://www.yacht-club-monaco.mc/" target="_blank" class="eco-link">Узнать больше →</a>
+            </div>
+            
+            <div class="eco-card">
+                <div class="eco-icon">🎰</div>
+                <h3 data-i18n="casino">Casino & Entertainment</h3>
+                <p data-i18n="casino_desc">Монте-Карло — эксклюзивные развлечения</p>
+                <a href="https://www.casinomontecarlo.com/" target="_blank" class="eco-link">Узнать больше →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 10. ПАРТНЁРЫ (LOGOS)                                   -->
+    <!-- ======================================================= -->
+    <section class="partners-section">
+        <h2 data-i18n="partners_title">🤝 Наши партнёры</h2>
+        <div class="partners-grid">
+            <div class="partner-item">
+                <img src="https://www.edmond-de-rothschild.com/favicon.ico" alt="Edmond de Rothschild">
+                <span>Edmond de Rothschild</span>
+            </div>
+            <div class="partner-item">
+                <img src="https://solana.com/favicon.ico" alt="Solana">
+                <span>Solana</span>
+            </div>
+            <div class="partner-item">
+                <img src="https://meteora.ag/favicon.ico" alt="Meteora">
+                <span>Meteora</span>
+            </div>
+            <div class="partner-item">
+                <img src="https://jup.ag/favicon.ico" alt="Jupiter">
+                <span>Jupiter</span>
+            </div>
+            <div class="partner-item">
+                <img src="https://www.casinomontecarlo.com/favicon.ico" alt="Monte Carlo Casino">
+                <span>Monte Carlo Casino</span>
+            </div>
+            <div class="partner-item">
+                <img src="https://www.montecarlosothebysir.com/favicon.ico" alt="Sotheby's Monaco">
+                <span>Sotheby's Monaco</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 11. ДОРОЖНАЯ КАРТА (ROADMAP)                           -->
+    <!-- ======================================================= -->
+    <section class="roadmap-section">
+        <h2 data-i18n="roadmap_title">🗺️ Дорожная карта</h2>
+        <div class="roadmap-timeline">
+            <div class="roadmap-item completed">
+                <div class="roadmap-dot"></div>
+                <div class="roadmap-content">
+                    <span class="roadmap-phase">✅ Q2 2024</span>
+                    <h4 data-i18n="phase1_title">Создание токена MCF</h4>
+                    <p data-i18n="phase1_desc">Mint на Solana, логотип, метаданные</p>
+                </div>
+            </div>
+            <div class="roadmap-item active">
+                <div class="roadmap-dot"></div>
+                <div class="roadmap-content">
+                    <span class="roadmap-phase">🔥 Q3 2024</span>
+                    <h4 data-i18n="phase2_title">Листинг на Meteora</h4>
+                    <p data-i18n="phase2_desc">Добавление ликвидности, начало торгов</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-dot"></div>
+                <div class="roadmap-content">
+                    <span class="roadmap-phase">🚀 Q4 2024</span>
+                    <h4 data-i18n="phase3_title">CoinGecko & CoinMarketCap</h4>
+                    <p data-i18n="phase3_desc">Подача на листинг, глобальное признание</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-dot"></div>
+                <div class="roadmap-content">
+                    <span class="roadmap-phase">🏆 Q1 2025</span>
+                    <h4 data-i18n="phase4_title">Экосистема и партнёрства</h4>
+                    <p data-i18n="phase4_desc">Интеграции с реальным бизнесом в Монако</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 12. СТЕЙКИНГ (STAKING)                                 -->
+    <!-- ======================================================= -->
+    <section class="staking-section">
+        <h2 data-i18n="staking_title">💰 Стейкинг MCF</h2>
+        <p data-i18n="staking_sub">Зарабатывайте до 12% APY, блокируя свои токены</p>
+        
+        <div class="staking-grid">
+            <div class="staking-card">
+                <h4>3 месяца</h4>
+                <div class="staking-apy">8% APY</div>
+                <p data-i18n="staking_flex">Гибкий стейкинг</p>
+                <button class="btn-stake" data-i18n="stake_btn">Начать</button>
+            </div>
+            <div class="staking-card popular">
+                <div class="popular-badge">🔥 Популярный</div>
+                <h4>6 месяцев</h4>
+                <div class="staking-apy">12% APY</div>
+                <p data-i18n="staking_optimal">Оптимальный выбор</p>
+                <button class="btn-stake" data-i18n="stake_btn">Начать</button>
+            </div>
+            <div class="staking-card">
+                <h4>12 месяцев</h4>
+                <div class="staking-apy">15% APY</div>
+                <p data-i18n="staking_long">Максимальный доход</p>
+                <button class="btn-stake" data-i18n="stake_btn">Начать</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 13. НИЖНЯЯ БЕГУЩАЯ СТРОКА (НОВОСТИ)                    -->
+    <!-- ======================================================= -->
+    <div class="news-ticker">
+        <div class="news-ticker-content" id="newsTicker">
+            <span>📰 <span data-i18n="news_label">Новости:</span></span>
+            <span>🔹 MCF запускается на Meteora — торги стартуют через 24 часа</span>
+            <span>🔹 Партнёрство с Monte Carlo Sotheby's — эксклюзивные предложения</span>
+            <span>🔹 Аудит смарт-контракта завершён — безопасность подтверждена</span>
+            <span>🔹 Заявка на листинг CoinGecko подана</span>
+            <span>🔹 Сообщество MCF превысило 10,000 участников</span>
+            <span>🔹 Следующая остановка — CoinMarketCap</span>
+        </div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- 14. ПОДВАЛ (FOOTER)                                    -->
+    <!-- ======================================================= -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>MCF</h4>
+                <p data-i18n="footer_desc">Monaco Capital Frank — премиальный токен на Solana</p>
+                <div class="social-links">
+                    <a href="https://t.me/mcf_token" target="_blank">📱 Telegram</a>
+                    <a href="https://twitter.com/mcf_token" target="_blank">🐦 Twitter</a>
+                    <a href="https://github.com/euribank/mcf" target="_blank">💻 GitHub</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_links">Ссылки</h4>
+                <a href="https://solscan.io/token/33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX" target="_blank">Solscan</a>
+                <a href="https://jup.ag/" target="_blank">Jupiter</a>
+                <a href="https://meteora.ag/" target="_blank">Meteora</a>
+                <a href="https://coingecko.com/" target="_blank">CoinGecko</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_legal">Юридическая информация</h4>
+                <p data-i18n="footer_disclaimer">MCF — независимый проект. Не является инвестиционной рекомендацией.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Mint Address</h4>
+                <code class="footer-address">33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX</code>
+                <button class="copy-btn" onclick="copyAddress()">📋 Копировать</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 MCF — Monaco Capital Frank. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ======================================================= -->
+    <!-- 15. СКРИПТЫ                                             -->
+    <!-- ======================================================= -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/counters.js"></script>
+    <script src="js/ticker.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

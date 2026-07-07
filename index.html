@@ -5,26 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCF — Monaco Capital Frank | Premium Token on Solana</title>
     
-    <meta name="description" content="MCF (Monaco Capital Frank) — premium token on Solana. Inspired by Monaco's financial heritage.">
+    <meta name="description" content="MCF (Monaco Capital Frank) — premium token on Solana. Inspired by Monaco's financial heritage. 0.25% transfer fee for development.">
     <meta name="keywords" content="MCF, Monaco Capital Frank, Solana, token, crypto, Monaco">
     <meta name="author" content="MCF Team">
     
     <meta property="og:title" content="MCF — Monaco Capital Frank">
     <meta property="og:description" content="Premium Digital Asset on Solana. Inspired by Monaco's financial heritage.">
-    <meta property="og:image" content="mcf_logo.png">
+    <meta property="og:image" content="mcf_logo1.png">
     <meta property="og:url" content="https://goldtether.github.io/mcf/">
     <meta property="og:type" content="website">
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MCF — Monaco Capital Frank">
     <meta name="twitter:description" content="Premium Digital Asset on Solana.">
-    <meta name="twitter:image" content="mcf_logo.png">
+    <meta name="twitter:image" content="mcf_logo1.png">
     
-    <link rel="icon" type="image/png" href="mcf_logo.png">
+    <link rel="icon" type="image/png" href="mcf_logo1.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     
-    <!-- ВСЁ В КОРНЕ -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animations.css">
 </head>
@@ -46,9 +45,9 @@
     <div class="ticker-wrap">
         <div class="ticker">
             <span>🏦 MCF — MONACO CAPITAL FRANK</span>
-            <span>💰 Price: <span id="tickerPrice">$0.0012</span></span>
+            <span>💰 Price: <span id="tickerPrice">$0.0152</span></span>
             <span>📈 <span id="tickerChange" class="positive">+5.4%</span> (24h)</span>
-            <span>🏆 Market Cap: <span id="tickerMCap">$12M</span></span>
+            <span>🏆 Market Cap: <span id="tickerMCap">$152M</span></span>
             <span>👥 Holders: <span id="tickerHolders">1,234</span></span>
             <span>🔒 Liquidity: <span id="tickerLiq">$500K</span></span>
             <span>🌐 Solana Network</span>
@@ -78,7 +77,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">
-                <img src="mcf_logo.png" alt="MCF" width="32">
+                <img src="mcf_logo1.png" alt="MCF" width="32">
                 <span>MCF</span>
             </a>
             <ul class="nav-links">
@@ -88,6 +87,7 @@
                 <li><a href="#roadmap" data-i18n="nav_roadmap">Roadmap</a></li>
                 <li><a href="#staking" data-i18n="nav_staking">Staking</a></li>
                 <li><a href="#partners" data-i18n="nav_partners">Partners</a></li>
+                <li><a href="#whitepaper" data-i18n="nav_whitepaper">Whitepaper</a></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </div>
@@ -138,7 +138,7 @@
         
         <div class="hero-coin">
             <div class="coin-3d">
-                <img src="mcf_logo.png" alt="MCF Coin" class="rotating-coin">
+                <img src="mcf_logo1.png" alt="MCF Coin" class="rotating-coin">
                 <div class="coin-glow"></div>
                 <div class="coin-ring"></div>
                 <div class="coin-ring-2"></div>
@@ -236,7 +236,7 @@
             <div class="chart-header">
                 <h2 data-i18n="chart_title">📊 MCF Price Chart</h2>
                 <div class="chart-price-info">
-                    <span class="chart-current-price">$0.0012</span>
+                    <span class="chart-current-price">$0.0152</span>
                     <span class="chart-change positive">+5.4%</span>
                 </div>
             </div>
@@ -483,6 +483,29 @@
         </div>
     </section>
 
+    <!-- WHITEPAPER -->
+    <section class="whitepaper-section" id="whitepaper">
+        <div class="section-header">
+            <h2 data-i18n="whitepaper_title">📄 Whitepaper</h2>
+            <p data-i18n="whitepaper_sub">Everything you need to know about MCF</p>
+        </div>
+        <div class="whitepaper-content">
+            <p data-i18n="whitepaper_intro">
+                <strong>Monaco Capital Frank (MCF)</strong> is a premium digital asset on the Solana blockchain, inspired by the financial heritage of Monaco. With a fixed supply of 10 billion tokens and a 0.25% transfer fee, MCF is designed for sustainable growth and long-term value.
+            </p>
+            <p data-i18n="whitepaper_details">
+                The project is named after the historical Monegasque franc (MCF), which was pegged to the euro at a fixed rate of <strong>1 EUR = 6.55957 MCF</strong>. This historical connection gives MCF a unique identity in the crypto space.
+            </p>
+            <p data-i18n="whitepaper_vision">
+                Our vision is to bridge traditional finance and decentralized technology, offering users a secure, transparent, and fast payment solution. With integrations planned with Monte Carlo casinos, yacht clubs, and luxury real estate, MCF aims to become the digital currency of the Riviera.
+            </p>
+            <div class="whitepaper-download">
+                <a href="whitepaper.pdf" class="btn-primary" download data-i18n="whitepaper_download">⬇️ Download Whitepaper (PDF)</a>
+                <span data-i18n="whitepaper_version">Version 1.0 — July 2026</span>
+            </div>
+        </div>
+    </section>
+
     <!-- ПОДПИСКА -->
     <section class="subscribe-section" style="background-image: url('monaco-city.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="subscribe-overlay"></div>
@@ -496,7 +519,6 @@
             <div class="social-links-big">
                 <a href="https://t.me/mcf_token" target="_blank" class="social-btn telegram">📱 Telegram</a>
                 <a href="https://twitter.com/mcf_token" target="_blank" class="social-btn twitter">🐦 Twitter</a>
-                <a href="https://github.com/euribank/mcf" target="_blank" class="social-btn github">💻 GitHub</a>
             </div>
         </div>
     </section>
@@ -506,14 +528,13 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <div class="footer-logo">
-                    <img src="mcf_logo.png" alt="MCF" width="40">
+                    <img src="mcf_logo1.png" alt="MCF" width="40">
                     <span>MCF</span>
                 </div>
                 <p data-i18n="footer_desc">Monaco Capital Frank — premium token on Solana, inspired by the financial heritage of Monaco.</p>
                 <div class="social-links">
                     <a href="https://t.me/mcf_token" target="_blank">📱 Telegram</a>
                     <a href="https://twitter.com/mcf_token" target="_blank">🐦 Twitter</a>
-                    <a href="https://github.com/euribank/mcf" target="_blank">💻 GitHub</a>
                 </div>
             </div>
             <div class="footer-col">

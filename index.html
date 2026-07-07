@@ -3,29 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCF — Monaco Capital Frank | Premium Token on Solana</title>
+    <title>MCF — Monaco Capital Frank</title>
     
-    <meta name="description" content="MCF (Monaco Capital Frank) — premium token on Solana. Inspired by Monaco's financial heritage.">
-    <meta name="keywords" content="MCF, Monaco Capital Frank, Solana, token, crypto, Monaco, DeFi">
-    <meta name="author" content="MCF Team">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="MCF — Monaco Capital Frank">
-    <meta property="og:description" content="Premium Digital Asset on Solana.">
-    <meta property="og:image" content="mcf_logo1.png">
-    <meta property="og:url" content="https://goldtether.github.io/mcf/">
-    <meta property="og:type" content="website">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MCF — Monaco Capital Frank">
-    <meta name="twitter:description" content="Premium Digital Asset on Solana.">
-    <meta name="twitter:image" content="mcf_logo1.png">
-    
-    <link rel="icon" type="image/png" href="mcf_logo1.png">
-    <link rel="apple-touch-icon" href="mcf_logo1.png">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-    
+    <!-- ПРЯМЫЕ ПУТИ (ВСЁ В КОРНЕ) -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animations.css">
 </head>
@@ -37,11 +17,7 @@
             <source src="monaco-drone.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
-        <div class="video-glow"></div>
     </div>
-
-    <!-- ЧАСТИЦЫ -->
-    <div id="particles-js"></div>
 
     <!-- ВЕРХНЯЯ БЕГУЩАЯ СТРОКА -->
     <div class="ticker-wrap">
@@ -75,725 +51,83 @@
         <button class="lang-btn" data-lang="ar">🇸🇦 AR</button>
     </div>
 
-    <!-- НАВИГАЦИЯ -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <img src="mcf_logo1.png" alt="MCF" width="32">
-                <span>MCF</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#tokenomics">Tokenomics</a></li>
-                <li><a href="#ecosystem">Ecosystem</a></li>
-                <li><a href="#investors">Investors</a></li>
-                <li><a href="#staking">Staking</a></li>
-                <li><a href="#roadmap">Roadmap</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#whitepaper">Whitepaper</a></li>
-                <li><a href="#partners">Partners</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-        </div>
-    </nav>
-
-    <!-- ========================================================= -->
-    <!-- СТРАНИЦА 1: ГЛАВНАЯ (HOME)                               -->
-    <!-- ========================================================= -->
-    <section class="page active" id="home">
-        <div class="hero">
-            <div class="hero-content">
-                <div class="hero-badge" data-i18n="badge">🏦 PREMIUM TOKEN</div>
-                
-                <h1 class="hero-title">
-                    <span class="title-gold" data-i18n="title">Monaco Capital Frank</span>
-                    <span class="title-sub" data-i18n="subtitle">Next Generation Digital Asset</span>
-                </h1>
-                
-                <p class="hero-description" data-i18n="description">
-                    Premium token on Solana inspired by Monaco's financial heritage. 0.25% transfer fee fuels development, marketing, and listings.
-                </p>
-                
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <span class="stat-value">$0.01525</span>
-                        <span class="stat-label">Price</span>
-                        <span class="stat-change positive">+0.1%</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="stat-value">$152.53M</span>
-                        <span class="stat-label">Market Cap</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="stat-value">$67.36M</span>
-                        <span class="stat-label">Liquidity</span>
-                    </div>
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🏦 PREMIUM TOKEN</div>
+            <h1 class="hero-title">
+                <span class="title-gold">Monaco Capital Frank</span>
+                <span class="title-sub">Next Generation Digital Asset</span>
+            </h1>
+            <p class="hero-description">
+                Premium token on Solana inspired by Monaco's financial heritage.<br>
+                0.25% transfer fee fuels development, marketing, and listings.
+            </p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-value">$0.01525</span>
+                    <span class="stat-label">Price</span>
                 </div>
-                
-                <div class="hero-buttons">
-                    <a href="https://jup.ag/" target="_blank" class="btn-primary">🚀 Buy MCF</a>
-                    <a href="#ecosystem" class="btn-secondary">🏛️ Ecosystem</a>
-                    <a href="https://solscan.io/token/33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX" target="_blank" class="btn-tertiary">🔍 Check Token</a>
+                <div class="hero-stat">
+                    <span class="stat-value">$152.53M</span>
+                    <span class="stat-label">Market Cap</span>
                 </div>
-                
-                <div class="mint-address">
-                    <span>Mint Address:</span>
-                    <code>33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX</code>
-                    <button class="copy-btn" onclick="copyAddress()">📋</button>
-                    <span class="mint-status">✅ Active</span>
-                </div>
-                
-                <div class="pool-links">
-                    <span>Pools:</span>
-                    <a href="https://www.geckoterminal.com/solana/pools/9SWa1Z8BDmd8avbGWjDdv57pysJNoepuT5P8YQb4oTSb" target="_blank">MCF/EURI</a>
-                    <a href="#" target="_blank">MCF/USDC</a>
+                <div class="hero-stat">
+                    <span class="stat-value">$67.36M</span>
+                    <span class="stat-label">Liquidity</span>
                 </div>
             </div>
-            
-            <div class="hero-coin">
-                <div class="coin-3d">
-                    <img src="mcf_logo1.png" alt="MCF Coin" class="rotating-coin">
-                    <div class="coin-glow"></div>
-                    <div class="coin-ring"></div>
-                    <div class="coin-ring-2"></div>
-                </div>
+            <div class="hero-buttons">
+                <a href="https://jup.ag/" target="_blank" class="btn-primary">🚀 Buy MCF</a>
+                <a href="#" class="btn-secondary">🏛️ Ecosystem</a>
+            </div>
+            <div class="mint-address">
+                <span>Mint Address:</span>
+                <code>33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX</code>
+                <button class="copy-btn" onclick="copyAddress()">📋</button>
+                <span class="mint-status">✅ Active</span>
             </div>
         </div>
-
-        <!-- Ключевые показатели -->
-        <section class="counters-section" id="counters">
-            <div class="section-header">
-                <h2>📊 Key Metrics</h2>
-                <p>Real MCF token statistics</p>
-            </div>
-            <div class="counters-grid">
-                <div class="counter-item">
-                    <div class="counter-icon">💰</div>
-                    <div class="counter-number" data-target="10000000000">0</div>
-                    <div class="counter-label">Total Supply</div>
-                    <div class="counter-sub">10,000,000,000 MCF</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-icon">💧</div>
-                    <div class="counter-number" data-target="67360000">0</div>
-                    <div class="counter-label">Liquidity</div>
-                    <div class="counter-sub">$67.36M</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-icon">📈</div>
-                    <div class="counter-number" data-target="795540">0</div>
-                    <div class="counter-label">24h Volume</div>
-                    <div class="counter-sub">$795,540</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-icon">🏦</div>
-                    <div class="counter-number" data-target="12">0</div>
-                    <div class="counter-label">Staking APY</div>
-                    <div class="counter-sub">% per year</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Навигация по страницам (внизу) -->
-        <div class="page-navigation">
-            <h3>📚 Explore MCF</h3>
-            <div class="page-links">
-                <a href="#about">📄 About</a>
-                <a href="#tokenomics">📊 Tokenomics</a>
-                <a href="#ecosystem">🏛️ Ecosystem</a>
-                <a href="#investors">💼 Investors</a>
-                <a href="#staking">💰 Staking</a>
-                <a href="#roadmap">🗺️ Roadmap</a>
-                <a href="#team">👥 Team</a>
-                <a href="#blog">📰 Blog</a>
-                <a href="#whitepaper">📄 Whitepaper</a>
-                <a href="#partners">🤝 Partners</a>
-                <a href="#contact">📬 Contact</a>
+        <div class="hero-coin">
+            <div class="coin-3d">
+                <img src="mcf_logo1.png" alt="MCF Coin" class="rotating-coin">
+                <div class="coin-glow"></div>
+                <div class="coin-ring"></div>
             </div>
         </div>
     </section>
 
-    <!-- ========================================================= -->
-    <!-- СТРАНИЦА 2: О ПРОЕКТЕ (ABOUT)                            -->
-    <!-- ========================================================= -->
-    <section class="page" id="about">
-        <div class="page-header">
-            <h1 data-i18n="about_title">📄 About MCF</h1>
-            <p data-i18n="about_sub">The story behind Monaco Capital Frank</p>
+    <!-- СЧЁТЧИКИ -->
+    <section class="counters-section">
+        <div class="section-header">
+            <h2>📊 Key Metrics</h2>
+            <p>Real MCF token statistics</p>
         </div>
-        
-        <div class="about-content">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2 data-i18n="about_mission">Our Mission</h2>
-                    <p data-i18n="about_mission_text">MCF is a premium digital asset on the Solana blockchain, inspired by the financial heritage of Monaco. With a fixed supply of 10 billion tokens and a 0.25% transfer fee, MCF is designed for sustainable growth and long-term value.</p>
-                    
-                    <h2 data-i18n="about_history">Historical Connection</h2>
-                    <p data-i18n="about_history_text">The project is named after the historical Monegasque franc (MCF), which was pegged to the euro at a fixed rate of <strong>1 EUR = 6.55957 MCF</strong>. This historical connection gives MCF a unique identity in the crypto space.</p>
-                    
-                    <h2 data-i18n="about_vision">Our Vision</h2>
-                    <p data-i18n="about_vision_text">To bridge traditional finance and decentralized technology, offering users a secure, transparent, and fast payment solution. With integrations planned with Monte Carlo casinos, yacht clubs, and luxury real estate, MCF aims to become the digital currency of the Riviera.</p>
-                </div>
-                <div class="about-image">
-                    <img src="monaco-aerial.jpg" alt="Monaco" class="about-img">
-                    <div class="about-stat-box">
-                        <span class="about-stat-number">1 EUR = 6.55957 MCF</span>
-                        <span class="about-stat-label">Historical peg</span>
-                    </div>
-                </div>
+        <div class="counters-grid">
+            <div class="counter-item">
+                <div class="counter-icon">💰</div>
+                <div class="counter-number" data-target="10000000000">0</div>
+                <div class="counter-label">Total Supply</div>
             </div>
-        </div>
-        
-        <div class="page-navigation">
-            <a href="#home">← Home</a>
-            <a href="#tokenomics">Tokenomics →</a>
+            <div class="counter-item">
+                <div class="counter-icon">💧</div>
+                <div class="counter-number" data-target="67360000">0</div>
+                <div class="counter-label">Liquidity</div>
+            </div>
+            <div class="counter-item">
+                <div class="counter-icon">📈</div>
+                <div class="counter-number" data-target="795540">0</div>
+                <div class="counter-label">24h Volume</div>
+            </div>
+            <div class="counter-item">
+                <div class="counter-icon">🏦</div>
+                <div class="counter-number" data-target="12">0</div>
+                <div class="counter-label">Staking APY</div>
+            </div>
         </div>
     </section>
 
-    <!-- ========================================================= -->
-    <!-- СТРАНИЦА 3: ТОКЕНОМИКА (TOKENOMICS)                      -->
-    <!-- ========================================================= -->
-    <section class="page" id="tokenomics">
-        <div class="page-header">
-            <h1 data-i18n="tokenomics_title">📊 Tokenomics</h1>
-            <p data-i18n="tokenomics_sub">MCF token distribution and economics</p>
-        </div>
-        
-        <div class="tokenomics-grid">
-            <div class="tokenomics-card">
-                <h3>Total Supply</h3>
-                <div class="tokenomics-number">10,000,000,000</div>
-                <p>Fixed supply, no inflation</p>
-            </div>
-            <div class="tokenomics-card">
-                <h3>Transfer Fee</h3>
-                <div class="tokenomics-number">0.25%</div>
-                <p>Fuels development & marketing</p>
-            </div>
-            <div class="tokenomics-card">
-                <h3>Market Cap</h3>
-                <div class="tokenomics-number">$152.53M</div>
-                <p>Fully diluted valuation</p>
-            </div>
-            <div class="tokenomics-card">
-                <h3>Liquidity</h3>
-                <div class="tokenomics-number">$67.36M</div>
-                <p>On Meteora DAMM V2</p>
-            </div>
-        </div>
-        
-        <div class="tokenomics-chart">
-            <h3>Distribution</h3>
-            <div class="chart-placeholder">
-                <div class="chart-bar">
-                    <span>Public Sale</span>
-                    <div class="bar" style="width:40%; background:#C9A84C;">40%</div>
-                </div>
-                <div class="chart-bar">
-                    <span>Team & Advisors</span>
-                    <div class="bar" style="width:15%; background:#CE1126;">15%</div>
-                </div>
-                <div class="chart-bar">
-                    <span>Liquidity</span>
-                    <div class="bar" style="width:20%; background:#14F195;">20%</div>
-                </div>
-                <div class="chart-bar">
-                    <span>Ecosystem</span>
-                    <div class="bar" style="width:15%; background:#9945FF;">15%</div>
-                </div>
-                <div class="chart-bar">
-                    <span>Staking Rewards</span>
-                    <div class="bar" style="width:10%; background:#F5D98E;">10%</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="page-navigation">
-            <a href="#about">← About</a>
-            <a href="#ecosystem">Ecosystem →</a>
-        </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- СТРАНИЦА 4: ЭКОСИСТЕМА (ECOSYSTEM)                       -->
-    <!-- ========================================================= -->
-    <section class="page" id="ecosystem">
-        <div class="page-header">
-            <h1 data-i18n="ecosystem_title">🏛️ MCF Ecosystem</h1>
-            <p data-i18n="ecosystem_sub">Inspired by Monaco's financial heritage</p>
-        </div>
-        
-        <div class="ecosystem-grid">
-            <div class="eco-card" style="background-image: url('monte-carlo-casino.jpeg');">
-                <div class="eco-card-overlay">
-                    <div class="eco-icon">🏦</div>
-                    <h3>Private Banking</h3>
-                    <p>Personal banking for holders of 100K+ MCF</p>
-                    <a href="https://www.edmond-de-rothschild.com/" target="_blank" class="eco-link">Learn more →</a>
-                </div>
-            </div>
-            <div class="eco-card" style="background-image: url('monaco-city.jpg');">
-                <div class="eco-card-overlay">
-                    <div class="eco-icon">📊</div>
-                    <h3>Wealth Management</h3>
-                    <p>Capital management with AI advisor</p>
-                    <a href="https://www.edmond-de-rothschild.com/" target="_blank" class="eco-link">Learn more →</a>
-                </div>
-            </div>
-            <div class="eco-card" style="background-image: url('monaco-gardens.jpeg');">
-                <div class="eco-card-overlay">
-                    <div class="eco-icon">🌱</div>
-                    <h3>ESG & Sustainability</h3>
-                    <p>Sustainable development and social responsibility</p>
-                    <a href="https://www.edmond-de-rothschild.com/" target="_blank" class="eco-link">Learn more →</a>
-                </div>
-            </div>
-            <div class="eco-card" style="background-image: url('monaco-grand-prix.jpg');">
-                <div class="eco-card-overlay">
-                    <div class="eco-icon">🏠</div>
-                    <h3>Real Estate</h3>
-                    <p>Investments in elite Monaco real estate</p>
-                    <a href="https://www.montecarlosothebysir.com/" target="_blank" class="eco-link">Learn more →</a>
-                </div>
-            </div>
-            <div class="eco-card" style="background-image: url('luxury-yacht.jpg');">
-                <div class="eco-card-overlay">
-                    <div class="eco-icon">⛵</div>
-                    <h3>Yacht Services</h3>
-                    <p>Yachts, charters and maritime services</p>
-                    <a href="https://www.yacht-club-monaco.mc/" target="_blank" class="eco-link">Learn more →</a>
-                </div>
-            </div>
-            <div class="eco-card" style="background-image: url('monaco-opera.jpeg');">
-                <div class="eco-card-overlay">
-                    <div class="eco-icon">🎰</div>
-                    <h3>Casino & Entertainment</h3>
-                    <p>Monte Carlo — exclusive entertainment</p>
-                    <a href="https://www.casinomontecarlo.com/" target="_blank" class="eco-link">Learn more →</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="page-navigation">
-            <a href="#tokenomics">← Tokenomics</a>
-            <a href="#investors">Investors →</a>
-        </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- СТРАНИЦА 5: ИНВЕСТОРАМ (INVESTORS)                       -->
-    <!-- ========================================================= -->
-    <section class="page" id="investors">
-        <div class="page-header">
-            <h1 data-i18n="investors_title">💼 For Investors</h1>
-            <p data-i18n="investors_sub">Everything you need to invest in MCF</p>
-        </div>
-        
-        <div class="investors-grid">
-            <div class="investor-card">
-                <h3>📈 Price</h3>
-                <div class="investor-value">$0.01525</div>
-                <span class="investor-change positive">+0.1% (24h)</span>
-            </div>
-            <div class="investor-card">
-                <h3>📊 Market Cap</h3>
-                <div class="investor-value">$152.53M</div>
-                <span>Fully diluted</span>
-            </div>
-            <div class="investor-card">
-                <h3>💧 Liquidity</h3>
-                <div class="investor-value">$67.36M</div>
-                <span>On Meteora</span>
-            </div>
-            <div class="investor-card">
-                <h3>📊 24h Volume</h3>
-                <div class="investor-value">$795,540</div>
-                <span>Growing steadily</span>
-            </div>
-        </div>
-        
-        <div class="investor-calculator">
-            <h3>📊 Investment Calculator</h3>
-            <div class="calculator">
-                <div class="calc-row">
-                    <label>Amount to invest (USD)</label>
-                    <input type="number" id="investAmount" value="1000" step="100">
-                </div>
-                <div class="calc-row">
-                    <label>MCF tokens received</label>
-                    <input type="text" id="tokensReceived" value="65,573" readonly>
-                </div>
-                <div class="calc-row">
-                    <label>Potential value if price reaches $1</label>
-                    <input type="text" id="potentialValue" value="$65,573" readonly>
-                </div>
-                <div class="calc-row">
-                    <label>ROI</label>
-                    <input type="text" id="roiValue" value="6,457%" readonly>
-                </div>
-            </div>
-        </div>
-        
-        <div class="page-navigation">
-            <a href="#ecosystem">← Ecosystem</a>
-            <a href="#staking">Staking →</a>
-        </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- СТРАНИЦА 6: СТЕЙКИНГ (STAKING)                           -->
-    <!-- ========================================================= -->
-    <section class="page" id="staking">
-        <div class="page-header">
-            <h1 data-i18n="staking_title">💰 MCF Staking</h1>
-            <p data-i18n="staking_sub">Earn up to 15% APY by locking your tokens</p>
-        </div>
-        
-        <div class="staking-grid">
-            <div class="staking-card">
-                <div class="staking-card-icon">🔄</div>
-                <h4>3 months</h4>
-                <div class="staking-apy">8% APY</div>
-                <p>Flexible staking</p>
-                <ul class="staking-benefits">
-                    <li>✅ Instant unlock</li>
-                    <li>✅ Minimal risk</li>
-                </ul>
-                <button class="btn-stake">Start</button>
-            </div>
-            <div class="staking-card popular">
-                <div class="popular-badge">🔥 Popular</div>
-                <div class="staking-card-icon">⚡</div>
-                <h4>6 months</h4>
-                <div class="staking-apy">12% APY</div>
-                <p>Optimal choice</p>
-                <ul class="staking-benefits">
-                    <li>✅ Balanced returns</li>
-                    <li>✅ Volatility protection</li>
-                </ul>
-                <button class="btn-stake">Start</button>
-            </div>
-            <div class="staking-card">
-                <div class="staking-card-icon">🏆</div>
-                <h4>12 months</h4>
-                <div class="staking-apy">15% APY</div>
-                <p>Maximum income</p>
-                <ul class="staking-benefits">
-                    <li>✅ Highest returns</li>
-                    <li>✅ Early bird bonuses</li>
-                </ul>
-                <button class="btn-stake">Start</button>
-            </div>
-        </div>
-        
-        <div class="staking-calculator">
-            <h3>🧮 Staking Calculator</h3>
-            <div class="calc-grid">
-                <div class="calc-item">
-                    <label>Amount (MCF)</label>
-                    <input type="number" id="stakeAmount" value="10000">
-                </div>
-                <div class="calc-item">
-                    <label>Duration</label>
-                    <select id="stakeDuration">
-                        <option value="3">3 months (8%)</option>
-                        <option value="6" selected>6 months (12%)</option>
-                        <option value="12">12 months (15%)</option>
-                    </select>
-                </div>
-                <div class="calc-item">
-                    <label>Reward (MCF)</label>
-                    <input type="text" id="stakeReward" value="1,200" readonly>
-                </div>
-                <div class="calc-item">
-                    <label>Total (MCF)</label>
-                    <input type="text" id="stakeTotal" value="11,200" readonly>
-                </div>
-            </div>
-        </div>
-        
-        <div class="page-navigation">
-            <a href="#investors">← Investors</a>
-            <a href="#roadmap">Roadmap →</a>
-        </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- СТРАНИЦА 7: ДОРОЖНАЯ КАРТА (ROADMAP)                     -->
-    <!-- ========================================================= -->
-    <section class="page" id="roadmap">
-        <div class="page-header">
-            <h1 data-i18n="roadmap_title">🗺️ Roadmap</h1>
-            <p data-i18n="roadmap_sub">MCF project development stages</p>
-        </div>
-        
-        <div class="roadmap-timeline">
-            <div class="roadmap-item completed">
-                <div class="roadmap-dot"></div>
-                <div class="roadmap-content">
-                    <span class="roadmap-phase">✅ Q2 2024</span>
-                    <h4>MCF Token Creation</h4>
-                    <p>Mint on Solana, logo development, metadata upload. Full infrastructure preparation.</p>
-                </div>
-            </div>
-            <div class="roadmap-item active">
-                <div class="roadmap-dot"></div>
-                <div class="roadmap-content">
-                    <span class="roadmap-phase">🔥 Q3 2024</span>
-                    <h4>Meteora Listing</h4>
-                    <p>Adding liquidity, start of trading, integration with Jupiter and other aggregators.</p>
-                </div>
-            </div>
-            <div class="roadmap-item">
-                <div class="roadmap-dot"></div>
-                <div class="roadmap-content">
-                    <span class="roadmap-phase">🚀 Q4 2024</span>
-                    <h4>CoinGecko & CoinMarketCap</h4>
-                    <p>Listing applications, global recognition, first major partnerships.</p>
-                </div>
-            </div>
-            <div class="roadmap-item">
-                <div class="roadmap-dot"></div>
-                <div class="roadmap-content">
-                    <span class="roadmap-phase">🏆 Q1 2025</span>
-                    <h4>Ecosystem & Partnerships</h4>
-                    <p>Integrations with real business in Monaco, staking launch, community expansion.</p>
-                </div>
-            </div>
-            <div class="roadmap-item">
-                <div class="roadmap-dot"></div>
-                <div class="roadmap-content">
-                    <span class="roadmap-phase">💎 Q2 2025</span>
-                    <h4>International Recognition</h4>
-                    <p>Listing on top exchanges, strategic partnerships, global scaling.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="page-navigation">
-            <a href="#staking">← Staking</a>
-            <a href="#team">Team →</a>
-        </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- СТРАНИЦА 8: КОМАНДА (TEAM)                               -->
-    <!-- ========================================================= -->
-    <section class="page" id="team">
-        <div class="page-header">
-            <h1 data-i18n="team_title">👥 Our Team</h1>
-            <p data-i18n="team_sub">Experienced professionals from finance and blockchain</p>
-        </div>
-        
-        <div class="team-grid">
-            <div class="team-card">
-                <div class="team-photo" style="background-image: url('team-1.jpg');"></div>
-                <h3>Alexandre Dupont</h3>
-                <p class="team-role">CEO & Founder</p>
-                <p class="team-bio">10+ years in private banking at Edmond de Rothschild Monaco.</p>
-                <div class="team-social">
-                    <a href="#">🔗</a>
-                </div>
-            </div>
-            <div class="team-card">
-                <div class="team-photo" style="background-image: url('team-2.jpg');"></div>
-                <h3>Maria Rossi</h3>
-                <p class="team-role">CTO & Lead Developer</p>
-                <p class="team-bio">Senior Solana engineer, ex-Phantom contributor.</p>
-                <div class="team-social">
-                    <a href="#">🔗</a>
-                </div>
-            </div>
-            <div class="team-card">
-                <div class="team-photo" style="background-image: url('team-3.jpg');"></div>
-                <h3>James Sterling</h3>
-                <p class="team-role">Head of Marketing</p>
-                <p class="team-bio">Blockchain marketing expert, launched 5+ successful tokens.</p>
-                <div class="team-social">
-                    <a href="#">🔗</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="page-navigation">
-            <a href="#roadmap">← Roadmap</a>
-            <a href="#blog">Blog →</a>
-        </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- СТРАНИЦА 9: БЛОГ (BLOG)                                  -->
-    <!-- ========================================================= -->
-    <section class="page" id="blog">
-        <div class="page-header">
-            <h1 data-i18n="blog_title">📰 Latest News</h1>
-            <p data-i18n="blog_sub">Stay up to date with MCF</p>
-        </div>
-        
-        <div class="blog-grid">
-            <div class="blog-card">
-                <div class="blog-image" style="background-image: url('monaco-aerial.jpg');"></div>
-                <div class="blog-content">
-                    <span class="blog-date">July 15, 2026</span>
-                    <h3>MCF Launches on Meteora</h3>
-                    <p>Trading begins — liquidity pool is live with $67M+.</p>
-                    <a href="#" class="blog-link">Read more →</a>
-                </div>
-            </div>
-            <div class="blog-card">
-                <div class="blog-image" style="background-image: url('monte-carlo-casino.jpeg');"></div>
-                <div class="blog-content">
-                    <span class="blog-date">July 10, 2026</span>
-                    <h3>Smart Contract Audit Completed</h3>
-                    <p>Security confirmed by leading audit firm.</p>
-                    <a href="#" class="blog-link">Read more →</a>
-                </div>
-            </div>
-            <div class="blog-card">
-                <div class="blog-image" style="background-image: url('monaco-city.jpg');"></div>
-                <div class="blog-content">
-                    <span class="blog-date">July 5, 2026</span>
-                    <h3>MCF Community Reaches 10,000</h3>
-                    <p>Thanks to our amazing community!</p>
-                    <a href="#" class="blog-link">Read more →</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="page-navigation">
-            <a href="#team">← Team</a>
-            <a href="#whitepaper">Whitepaper →</a>
-        </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- СТРАНИЦА 10: WHITEPAPER                                   -->
-    <!-- ========================================================= -->
-    <section class="page" id="whitepaper">
-        <div class="page-header">
-            <h1 data-i18n="whitepaper_title">📄 Whitepaper</h1>
-            <p data-i18n="whitepaper_sub">Everything you need to know about MCF</p>
-        </div>
-        
-        <div class="whitepaper-content">
-            <h2>Monaco Capital Frank (MCF)</h2>
-            <p><strong>Abstract</strong></p>
-            <p>MCF is a premium digital asset on the Solana blockchain, inspired by the financial heritage of Monaco. With a fixed supply of 10 billion tokens and a 0.25% transfer fee, MCF is designed for sustainable growth and long-term value.</p>
-            
-            <h3>Historical Connection</h3>
-            <p>The project is named after the historical Monegasque franc (MCF), which was pegged to the euro at a fixed rate of <strong>1 EUR = 6.55957 MCF</strong>. This historical connection gives MCF a unique identity in the crypto space.</p>
-            
-            <h3>Vision</h3>
-            <p>To bridge traditional finance and decentralized technology, offering users a secure, transparent, and fast payment solution. With integrations planned with Monte Carlo casinos, yacht clubs, and luxury real estate, MCF aims to become the digital currency of the Riviera.</p>
-            
-            <h3>Tokenomics</h3>
-            <ul>
-                <li><strong>Total Supply:</strong> 10,000,000,000 MCF</li>
-                <li><strong>Transfer Fee:</strong> 0.25%</li>
-                <li><strong>Blockchain:</strong> Solana</li>
-                <li><strong>Initial Price:</strong> $0.0152449 (historical peg)</li>
-            </ul>
-            
-            <div class="whitepaper-download">
-                <a href="whitepaper.pdf" class="btn-primary" download>⬇️ Download Whitepaper (PDF)</a>
-                <span>Version 1.0 — July 2026</span>
-            </div>
-        </div>
-        
-        <div class="page-navigation">
-            <a href="#blog">← Blog</a>
-            <a href="#partners">Partners →</a>
-        </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- СТРАНИЦА 11: ПАРТНЁРЫ (PARTNERS)                         -->
-    <!-- ========================================================= -->
-    <section class="page" id="partners">
-        <div class="page-header">
-            <h1 data-i18n="partners_title">🤝 Our Partners</h1>
-            <p data-i18n="partners_sub">We cooperate with leading companies of Monaco and the world</p>
-        </div>
-        
-        <div class="partners-grid">
-            <div class="partner-item"><span>Edmond de Rothschild</span></div>
-            <div class="partner-item"><span>Solana</span></div>
-            <div class="partner-item"><span>Meteora</span></div>
-            <div class="partner-item"><span>Jupiter</span></div>
-            <div class="partner-item"><span>Monte Carlo Casino</span></div>
-            <div class="partner-item"><span>Sotheby's Monaco</span></div>
-            <div class="partner-item"><span>Yacht Club Monaco</span></div>
-            <div class="partner-item"><span>SBM Group</span></div>
-            <div class="partner-item"><span>Grimaldi Forum</span></div>
-            <div class="partner-item"><span>Monaco Telecom</span></div>
-        </div>
-        
-        <div class="page-navigation">
-            <a href="#whitepaper">← Whitepaper</a>
-            <a href="#contact">Contact →</a>
-        </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- СТРАНИЦА 12: КОНТАКТЫ (CONTACT)                          -->
-    <!-- ========================================================= -->
-    <section class="page" id="contact">
-        <div class="page-header">
-            <h1 data-i18n="contact_title">📬 Contact Us</h1>
-            <p data-i18n="contact_sub">We'd love to hear from you</p>
-        </div>
-        
-        <div class="contact-grid">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span class="contact-icon">📧</span>
-                    <div>
-                        <h4>Email</h4>
-                        <p><a href="mailto:info@mcf-token.com">info@mcf-token.com</a></p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">📱</span>
-                    <div>
-                        <h4>Telegram</h4>
-                        <p><a href="https://t.me/mcf_token" target="_blank">@mcf_token</a></p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">🐦</span>
-                    <div>
-                        <h4>Twitter</h4>
-                        <p><a href="https://twitter.com/mcf_token" target="_blank">@mcf_token</a></p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">📍</span>
-                    <div>
-                        <h4>Office</h4>
-                        <p>Monte Carlo, Monaco</p>
-                    </div>
-                </div>
-            </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn-primary">Send Message</button>
-            </form>
-        </div>
-        
-        <div class="page-navigation">
-            <a href="#partners">← Partners</a>
-            <a href="#home">↑ Home</a>
-        </div>
-    </section>
-
-    <!-- ========================================================= -->
-    <!-- ФУТЕР (ВСЕГДА ВИДЕН)                                     -->
-    <!-- ========================================================= -->
+    <!-- ПОДВАЛ -->
     <footer class="footer">
         <div class="footer-grid">
             <div class="footer-col">
@@ -808,18 +142,11 @@
                 </div>
             </div>
             <div class="footer-col">
-                <h4>Quick Links</h4>
-                <a href="#home">Home</a>
-                <a href="#tokenomics">Tokenomics</a>
-                <a href="#ecosystem">Ecosystem</a>
-                <a href="#whitepaper">Whitepaper</a>
-            </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <a href="https://solscan.io/token/33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX" target="_blank">Solscan</a>
-                <a href="https://jup.ag/" target="_blank">Jupiter</a>
-                <a href="https://meteora.ag/" target="_blank">Meteora</a>
-                <a href="https://www.geckoterminal.com/solana/pools/9SWa1Z8BDmd8avbGWjDdv57pysJNoepuT5P8YQb4oTSb" target="_blank">GeckoTerminal</a>
+                <h4>Links</h4>
+                <a href="https://solscan.io/token/33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX" target="_blank">🔍 Solscan</a>
+                <a href="https://jup.ag/" target="_blank">🔄 Jupiter</a>
+                <a href="https://meteora.ag/" target="_blank">💧 Meteora</a>
+                <a href="https://www.geckoterminal.com/solana/pools/9SWa1Z8BDmd8avbGWjDdv57pysJNoepuT5P8YQb4oTSb" target="_blank">📊 GeckoTerminal</a>
             </div>
             <div class="footer-col">
                 <h4>Mint Address</h4>
@@ -833,16 +160,36 @@
         </div>
     </footer>
 
-    <!-- КНОПКА НАВЕРХ -->
-    <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">⬆</button>
-
     <!-- СКРИПТЫ -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="particles.js"></script>
+    <script>
+        function copyAddress() {
+            const address = '33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX';
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(address).then(() => {
+                    document.querySelectorAll('.copy-btn').forEach(b => {
+                        b.textContent = '✅';
+                        setTimeout(() => { b.textContent = '📋'; }, 2000);
+                    });
+                });
+            } else {
+                const input = document.createElement('input');
+                input.value = address;
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand('copy');
+                document.body.removeChild(input);
+                document.querySelectorAll('.copy-btn').forEach(b => {
+                    b.textContent = '✅';
+                    setTimeout(() => { b.textContent = '📋'; }, 2000);
+                });
+            }
+        }
+    </script>
+    
+    <!-- ПОДКЛЮЧЕНИЕ СКРИПТОВ (ВСЁ В КОРНЕ) -->
     <script src="counters.js"></script>
     <script src="ticker.js"></script>
     <script src="language.js"></script>
-    <script src="chart.js"></script>
     <script src="main.js"></script>
 
 </body>

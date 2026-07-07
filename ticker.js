@@ -3,12 +3,12 @@
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Имитация обновления данных
     setInterval(updateTickerData, 10000);
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 });
 
 function updateTickerData() {
-    // Случайные изменения для демонстрации
     const price = (0.0010 + Math.random() * 0.0005).toFixed(4);
     const change = (Math.random() * 10 - 3).toFixed(1);
     const mcap = (11 + Math.random() * 3).toFixed(0) + 'M';
@@ -33,18 +33,7 @@ function updateTickerData() {
     if (volumeEl) volumeEl.textContent = '$' + volume.toLocaleString();
 }
 
-// Запуск обновления цены в графике
-document.addEventListener('DOMContentLoaded', function() {
-    // Обновление таймера
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-});
-
-// ============================================================
-// ТАЙМЕР (COUNTDOWN)
-// ============================================================
 function updateCountdown() {
-    // Устанавливаем дату листинга (например, через 3 дня)
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 3);
     targetDate.setHours(14, 0, 0, 0);

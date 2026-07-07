@@ -1,133 +1,113 @@
 // ============================================================
-// PARTICLES.JS — ФОН С ЧАСТИЦАМИ ДЛЯ САЙТА MCF
+// CHART.JS — ГРАФИК ЦЕНЫ MCF
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    const canvas = document.createElement('canvas');
-    canvas.id = 'particlesCanvas';
-    canvas.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        pointer-events: none;
-    `;
-    document.body.appendChild(canvas);
+    const ctx = document.getElementById('priceChart');
+    if (!ctx) return;
     
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-    const particleCount = 80;
-    let mouseX = 0;
-    let mouseY = 0;
-    
-    // Resize
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-    
-    // Particle class
-    class Particle {
-        constructor() {
-            this.reset();
-        }
+    const generateData = (days) => {
+        const data = [];
+        const labels = [];
+        let price = 0.0010;
         
-        reset() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 2 + 1;
-            this.speedX = (Math.random() - 0.5) * 0.3;
-            this.speedY = (Math.random() - 0.5) * 0.3;
-            this.opacity = Math.random() * 0.5 + 0.2;
-            // Цвет: золотой или красный
-            this.color = Math.random() > 0.6 ? 
-                `rgba(201, 168, 76, ` : 
-                `rgba(206, 17, 38, `;
-        }
-        
-        update() {
-            this.x += this.speedX;
-            this.y += this.speedY;
+        for (let i = 0; i < days; i++) {
+            const change = (Math.random() - 0.48) * 0.0003;
+            price = Math.max(price + change, 0.0005);
+            data.push(price);
             
-            // Притяжение к мыши
-            if (mouseX && mouseY) {
-                const dx = mouseX - this.x;
-                const dy = mouseY - this.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < 200) {
-                    const force = (200 - dist) / 200 * 0.02;
-                    this.speedX += (dx / dist) * force;
-                    this.speedY += (dy / dist) * force;
+            if (days <= 7) {
+                labels.push(`${i}:00`);
+            } else if (days <= 30) {
+                labels.push(`Day ${i+1}`);
+            } else {
+                labels.push(`${i+1}`);
+            }
+        }
+        return { data, labels };
+    };
+    
+    const { data, labels } = generateData(30);
+    
+    const gradient = ctx.getContext('2d').createLinearGradient(0, 0, 0, 400);
+    gradient.addColorStop(0, 'rgba(201, 168, 76, 0.3)');
+    gradient.addColorStop(1, 'rgba(201, 168, 76, 0.01)');
+    
+    const chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'MCF Price (USDC)',
+                data: data,
+                borderColor: '#C9A84C',
+                backgroundColor: gradient,
+                borderWidth: 3,
+                fill: true,
+                tension: 0.4,
+                pointRadius: 2,
+                pointBackgroundColor: '#C9A84C',
+                pointBorderColor: '#C9A84C',
+                pointBorderWidth: 2,
+                pointHoverRadius: 6,
+                pointHoverBackgroundColor: '#FFFFFF',
+                pointHoverBorderColor: '#C9A84C',
+                pointHoverBorderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    backgroundColor: 'rgba(13, 13, 26, 0.9)',
+                    titleColor: '#FFFFFF',
+                    bodyColor: '#C9A84C',
+                    borderColor: 'rgba(201, 168, 76, 0.3)',
+                    borderWidth: 1,
+                    padding: 12,
+                    cornerRadius: 8,
+                    callbacks: {
+                        label: function(context) {
+                            return '$' + context.parsed.y.toFixed(6);
+                        }
+                    }
                 }
+            },
+            scales: {
+                x: {
+                    grid: { color: 'rgba(255,255,255,0.05)', display: true },
+                    ticks: { color: 'rgba(255,255,255,0.3)', font: { size: 11 }, maxTicksLimit: 10 }
+                },
+                y: {
+                    grid: { color: 'rgba(255,255,255,0.05)', display: true },
+                    ticks: { color: 'rgba(255,255,255,0.3)', font: { size: 11 }, callback: function(value) { return '$' + value.toFixed(4); } }
+                }
+            },
+            interaction: { intersect: false, mode: 'index' },
+            animation: { duration: 1500, easing: 'easeInOutQuart' }
+        }
+    });
+    
+    document.querySelectorAll('.chart-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const period = this.getAttribute('data-period');
+            let days;
+            
+            switch(period) {
+                case '1D': days = 24; break;
+                case '1W': days = 7; break;
+                case '1M': days = 30; break;
+                case '3M': days = 90; break;
+                case '1Y': days = 365; break;
+                default: days = 30;
             }
             
-            // Демпфирование
-            this.speedX *= 0.99;
-            this.speedY *= 0.99;
-            
-            // Границы
-            if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-            if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-        }
-        
-        draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = this.color + this.opacity + ')';
-            ctx.fill();
-        }
-    }
-    
-    // Init particles
-    for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-    }
-    
-    // Mouse tracking
-    document.addEventListener('mousemove', function(e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-    
-    document.addEventListener('mouseleave', function() {
-        mouseX = 0;
-        mouseY = 0;
-    });
-    
-    // Animation loop
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        particles.forEach(p => {
-            p.update();
-            p.draw();
+            const newData = generateData(days);
+            chart.data.labels = newData.labels;
+            chart.data.datasets[0].data = newData.data;
+            chart.update();
         });
-        
-        // Соединения между частицами
-        for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                
-                if (dist < 120) {
-                    const opacity = (1 - dist / 120) * 0.2;
-                    ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = `rgba(201, 168, 76, ${opacity})`;
-                    ctx.lineWidth = 1;
-                    ctx.stroke();
-                }
-            }
-        }
-        
-        requestAnimationFrame(animate);
-    }
-    
-    animate();
+    });
 });

@@ -21,19 +21,15 @@ function animateCounter(element) {
     const target = parseFloat(element.getAttribute('data-target'));
     const duration = 2500;
     const startTime = performance.now();
-    const isDecimal = target % 1 !== 0;
-    const hasComma = target >= 1000;
     
     function updateCounter(currentTime) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        const eased = easeOutQuart(progress);
+        const eased = 1 - Math.pow(1 - progress, 4);
         const current = eased * target;
         
         let displayValue;
-        if (isDecimal) {
-            displayValue = current.toFixed(1);
-        } else if (target >= 1000000000) {
+        if (target >= 1000000000) {
             displayValue = (current / 1000000000).toFixed(1) + 'B';
         } else if (target >= 1000000) {
             displayValue = (current / 1000000).toFixed(1) + 'M';
@@ -48,7 +44,6 @@ function animateCounter(element) {
         if (progress < 1) {
             requestAnimationFrame(updateCounter);
         } else {
-            // Финальное значение
             let finalValue;
             if (target >= 1000000000) {
                 finalValue = (target / 1000000000).toFixed(1) + 'B';
@@ -56,8 +51,6 @@ function animateCounter(element) {
                 finalValue = (target / 1000000).toFixed(1) + 'M';
             } else if (target >= 1000) {
                 finalValue = target.toLocaleString();
-            } else if (isDecimal) {
-                finalValue = target.toFixed(1);
             } else {
                 finalValue = target.toString();
             }
@@ -66,8 +59,4 @@ function animateCounter(element) {
     }
     
     requestAnimationFrame(updateCounter);
-}
-
-function easeOutQuart(t) {
-    return 1 - Math.pow(1 - t, 4);
 }

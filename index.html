@@ -5,34 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCF — Monaco Capital Frank | Premium Token on Solana</title>
     
-    <meta name="description" content="MCF (Monaco Capital Frank) — premium token on Solana. Inspired by Monaco's financial heritage. 0.25% transfer fee for development.">
-    <meta name="keywords" content="MCF, Monaco Capital Frank, Solana, token, crypto, Monaco, DeFi">
+    <meta name="description" content="MCF (Monaco Capital Frank) — premium token on Solana. Inspired by Monaco's financial heritage.">
+    <meta name="keywords" content="MCF, Monaco Capital Frank, Solana, token, crypto, Monaco">
     <meta name="author" content="MCF Team">
     
     <meta property="og:title" content="MCF — Monaco Capital Frank">
     <meta property="og:description" content="Premium Digital Asset on Solana. Inspired by Monaco's financial heritage.">
-    <meta property="og:image" content="images/mcf_logo.png">
+    <meta property="og:image" content="mcf_logo.png">
     <meta property="og:url" content="https://goldtether.github.io/mcf/">
     <meta property="og:type" content="website">
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MCF — Monaco Capital Frank">
     <meta name="twitter:description" content="Premium Digital Asset on Solana.">
-    <meta name="twitter:image" content="images/mcf_logo.png">
+    <meta name="twitter:image" content="mcf_logo.png">
     
-    <link rel="icon" type="image/png" href="images/mcf_logo.png">
+    <link rel="icon" type="image/png" href="mcf_logo.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <!-- ВСЁ В КОРНЕ -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
 </head>
 <body>
 
     <!-- ФОНОВОЕ ВИДЕО -->
-    <div class="video-background" id="bgVideoContainer">
-        <video autoplay muted loop playsinline id="bgVideo">
-            <source src="video/monaco-drone.mp4" type="video/mp4">
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="monaco-drone.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
         <div class="video-glow"></div>
@@ -43,7 +44,7 @@
 
     <!-- ВЕРХНЯЯ БЕГУЩАЯ СТРОКА -->
     <div class="ticker-wrap">
-        <div class="ticker" id="mainTicker">
+        <div class="ticker">
             <span>🏦 MCF — MONACO CAPITAL FRANK</span>
             <span>💰 Price: <span id="tickerPrice">$0.0012</span></span>
             <span>📈 <span id="tickerChange" class="positive">+5.4%</span> (24h)</span>
@@ -77,7 +78,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">
-                <img src="images/mcf_logo.png" alt="MCF" width="32">
+                <img src="mcf_logo.png" alt="MCF" width="32">
                 <span>MCF</span>
             </a>
             <ul class="nav-links">
@@ -122,15 +123,9 @@
             </div>
             
             <div class="hero-buttons">
-                <a href="https://jup.ag/" target="_blank" class="btn-primary" data-i18n="buy_btn">
-                    🚀 Buy MCF
-                </a>
-                <a href="https://meteora.ag/" target="_blank" class="btn-secondary" data-i18n="liquidity_btn">
-                    💧 Add Liquidity
-                </a>
-                <a href="https://solscan.io/token/33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX" target="_blank" class="btn-tertiary" data-i18n="explorer_btn">
-                    🔍 Check Token
-                </a>
+                <a href="https://jup.ag/" target="_blank" class="btn-primary" data-i18n="buy_btn">🚀 Buy MCF</a>
+                <a href="https://meteora.ag/" target="_blank" class="btn-secondary" data-i18n="liquidity_btn">💧 Add Liquidity</a>
+                <a href="https://solscan.io/token/33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX" target="_blank" class="btn-tertiary" data-i18n="explorer_btn">🔍 Check Token</a>
             </div>
             
             <div class="mint-address">
@@ -143,7 +138,7 @@
         
         <div class="hero-coin">
             <div class="coin-3d">
-                <img src="images/mcf_logo.png" alt="MCF Coin" class="rotating-coin">
+                <img src="mcf_logo.png" alt="MCF Coin" class="rotating-coin">
                 <div class="coin-glow"></div>
                 <div class="coin-ring"></div>
                 <div class="coin-ring-2"></div>
@@ -165,7 +160,6 @@
                 <div class="counter-sub">10,000,000,000 MCF</div>
                 <div class="counter-progress"><div class="progress-bar" style="width:100%"></div></div>
             </div>
-            
             <div class="counter-item">
                 <div class="counter-icon">👥</div>
                 <div class="counter-number" data-target="1234">0</div>
@@ -173,7 +167,6 @@
                 <div class="counter-sub">Unique wallets</div>
                 <div class="counter-progress"><div class="progress-bar" style="width:12%"></div></div>
             </div>
-            
             <div class="counter-item">
                 <div class="counter-icon">💧</div>
                 <div class="counter-number" data-target="500000">0</div>
@@ -181,7 +174,6 @@
                 <div class="counter-sub">$500,000 USDC</div>
                 <div class="counter-progress"><div class="progress-bar" style="width:50%"></div></div>
             </div>
-            
             <div class="counter-item">
                 <div class="counter-icon">📈</div>
                 <div class="counter-number" data-target="125000">0</div>
@@ -189,7 +181,6 @@
                 <div class="counter-sub">$125,432</div>
                 <div class="counter-progress"><div class="progress-bar" style="width:25%"></div></div>
             </div>
-            
             <div class="counter-item">
                 <div class="counter-icon">🏦</div>
                 <div class="counter-number" data-target="12">0</div>
@@ -197,7 +188,6 @@
                 <div class="counter-sub">% per year</div>
                 <div class="counter-progress"><div class="progress-bar" style="width:60%"></div></div>
             </div>
-            
             <div class="counter-item">
                 <div class="counter-icon">🌍</div>
                 <div class="counter-number" data-target="10000">0</div>
@@ -209,7 +199,7 @@
     </section>
 
     <!-- ТАЙМЕР -->
-    <section class="timer-section" style="background-image: url('images/monaco-harbor.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <section class="timer-section" style="background-image: url('monaco-harbor.png'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="timer-overlay"></div>
         <div class="timer-container">
             <div class="timer-badge">⏳ COUNTDOWN</div>
@@ -269,9 +259,8 @@
             <h2 data-i18n="ecosystem_title">🏛️ MCF Ecosystem</h2>
             <p class="section-subtitle" data-i18n="ecosystem_sub">Inspired by Monaco's financial heritage and Edmond de Rothschild</p>
         </div>
-        
         <div class="ecosystem-grid">
-            <div class="eco-card" style="background-image: url('images/monte-carlo-casino.jpeg');">
+            <div class="eco-card" style="background-image: url('monte-carlo-casino.jpeg');">
                 <div class="eco-card-overlay">
                     <div class="eco-icon">🏦</div>
                     <h3 data-i18n="private_banking">Private Banking</h3>
@@ -279,8 +268,7 @@
                     <a href="https://www.edmond-de-rothschild.com/" target="_blank" class="eco-link">Learn more →</a>
                 </div>
             </div>
-            
-            <div class="eco-card" style="background-image: url('images/monaco-city.jpg');">
+            <div class="eco-card" style="background-image: url('monaco-city.jpg');">
                 <div class="eco-card-overlay">
                     <div class="eco-icon">📊</div>
                     <h3 data-i18n="wealth_management">Wealth Management</h3>
@@ -288,8 +276,7 @@
                     <a href="https://www.edmond-de-rothschild.com/" target="_blank" class="eco-link">Learn more →</a>
                 </div>
             </div>
-            
-            <div class="eco-card" style="background-image: url('images/monaco-gardens.jpeg');">
+            <div class="eco-card" style="background-image: url('monaco-gardens.jpeg');">
                 <div class="eco-card-overlay">
                     <div class="eco-icon">🌱</div>
                     <h3 data-i18n="esg">ESG & Sustainability</h3>
@@ -297,8 +284,7 @@
                     <a href="https://www.edmond-de-rothschild.com/" target="_blank" class="eco-link">Learn more →</a>
                 </div>
             </div>
-            
-            <div class="eco-card" style="background-image: url('images/monaco-grand-prix.jpg');">
+            <div class="eco-card" style="background-image: url('monaco-grand-prix.jpg');">
                 <div class="eco-card-overlay">
                     <div class="eco-icon">🏠</div>
                     <h3 data-i18n="real_estate">Real Estate</h3>
@@ -306,8 +292,7 @@
                     <a href="https://www.montecarlosothebysir.com/" target="_blank" class="eco-link">Learn more →</a>
                 </div>
             </div>
-            
-            <div class="eco-card" style="background-image: url('images/luxury-yacht.jpg');">
+            <div class="eco-card" style="background-image: url('luxury-yacht.jpg');">
                 <div class="eco-card-overlay">
                     <div class="eco-icon">⛵</div>
                     <h3 data-i18n="yachts">Yacht Services</h3>
@@ -315,8 +300,7 @@
                     <a href="https://www.yacht-club-monaco.mc/" target="_blank" class="eco-link">Learn more →</a>
                 </div>
             </div>
-            
-            <div class="eco-card" style="background-image: url('images/monaco-opera.jpeg');">
+            <div class="eco-card" style="background-image: url('monaco-opera.jpeg');">
                 <div class="eco-card-overlay">
                     <div class="eco-icon">🎰</div>
                     <h3 data-i18n="casino">Casino & Entertainment</h3>
@@ -328,50 +312,26 @@
     </section>
 
     <!-- ПАРТНЁРЫ -->
-    <section class="partners-section" id="partners" style="background-image: url('images/prince-palace.jpeg'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <section class="partners-section" id="partners" style="background-image: url('prince-palace.jpeg'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="partners-overlay"></div>
         <div class="partners-content">
             <h2 data-i18n="partners_title">🤝 Our Partners</h2>
             <p data-i18n="partners_sub">We cooperate with leading companies of Monaco and the world</p>
             <div class="partners-grid">
-                <div class="partner-item">
-                    <img src="https://www.edmond-de-rothschild.com/favicon.ico" alt="Edmond de Rothschild" onerror="this.style.display='none'">
-                    <span>Edmond de Rothschild</span>
-                </div>
-                <div class="partner-item">
-                    <img src="https://solana.com/favicon.ico" alt="Solana" onerror="this.style.display='none'">
-                    <span>Solana</span>
-                </div>
-                <div class="partner-item">
-                    <img src="https://meteora.ag/favicon.ico" alt="Meteora" onerror="this.style.display='none'">
-                    <span>Meteora</span>
-                </div>
-                <div class="partner-item">
-                    <img src="https://jup.ag/favicon.ico" alt="Jupiter" onerror="this.style.display='none'">
-                    <span>Jupiter</span>
-                </div>
-                <div class="partner-item">
-                    <img src="https://www.casinomontecarlo.com/favicon.ico" alt="Monte Carlo Casino" onerror="this.style.display='none'">
-                    <span>Monte Carlo Casino</span>
-                </div>
-                <div class="partner-item">
-                    <img src="https://www.montecarlosothebysir.com/favicon.ico" alt="Sotheby's Monaco" onerror="this.style.display='none'">
-                    <span>Sotheby's Monaco</span>
-                </div>
-                <div class="partner-item">
-                    <img src="https://www.yacht-club-monaco.mc/favicon.ico" alt="Yacht Club Monaco" onerror="this.style.display='none'">
-                    <span>Yacht Club Monaco</span>
-                </div>
-                <div class="partner-item">
-                    <img src="https://www.sbm.mc/favicon.ico" alt="SBM Group" onerror="this.style.display='none'">
-                    <span>SBM Group</span>
-                </div>
+                <div class="partner-item"><span>Edmond de Rothschild</span></div>
+                <div class="partner-item"><span>Solana</span></div>
+                <div class="partner-item"><span>Meteora</span></div>
+                <div class="partner-item"><span>Jupiter</span></div>
+                <div class="partner-item"><span>Monte Carlo Casino</span></div>
+                <div class="partner-item"><span>Sotheby's Monaco</span></div>
+                <div class="partner-item"><span>Yacht Club Monaco</span></div>
+                <div class="partner-item"><span>SBM Group</span></div>
             </div>
         </div>
     </section>
 
     <!-- ДОРОЖНАЯ КАРТА -->
-    <section class="roadmap-section" id="roadmap" style="background: linear-gradient(rgba(13,13,26,0.92), rgba(13,13,26,0.95)), url('images/monaco-aerial.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <section class="roadmap-section" id="roadmap" style="background: linear-gradient(rgba(13,13,26,0.92), rgba(13,13,26,0.95)), url('monaco-aerial.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="section-header">
             <h2 data-i18n="roadmap_title">🗺️ Roadmap</h2>
             <p data-i18n="roadmap_sub">MCF project development stages</p>
@@ -409,26 +369,17 @@
                     <p data-i18n="phase4_desc">Integrations with real business in Monaco, staking launch, community expansion.</p>
                 </div>
             </div>
-            <div class="roadmap-item">
-                <div class="roadmap-dot"></div>
-                <div class="roadmap-content">
-                    <span class="roadmap-phase">💎 Q2 2025</span>
-                    <h4 data-i18n="phase5_title">International Recognition</h4>
-                    <p data-i18n="phase5_desc">Listing on top exchanges, strategic partnerships, global scaling.</p>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- СТЕЙКИНГ -->
-    <section class="staking-section" id="staking" style="background-image: url('images/mediterranean-sea.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <section class="staking-section" id="staking" style="background-image: url('mediterranean-sea.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="staking-overlay"></div>
         <div class="staking-content">
             <div class="section-header">
                 <h2 data-i18n="staking_title">💰 MCF Staking</h2>
                 <p data-i18n="staking_sub">Earn up to 15% APY by locking your tokens</p>
             </div>
-            
             <div class="staking-grid">
                 <div class="staking-card">
                     <div class="staking-card-icon">🔄</div>
@@ -441,7 +392,6 @@
                     </ul>
                     <button class="btn-stake" data-i18n="stake_btn">Start</button>
                 </div>
-                
                 <div class="staking-card popular">
                     <div class="popular-badge">🔥 Popular</div>
                     <div class="staking-card-icon">⚡</div>
@@ -454,7 +404,6 @@
                     </ul>
                     <button class="btn-stake" data-i18n="stake_btn">Start</button>
                 </div>
-                
                 <div class="staking-card">
                     <div class="staking-card-icon">🏆</div>
                     <h4>12 months</h4>
@@ -476,7 +425,6 @@
             <h2 data-i18n="faq_title">❓ Frequently Asked Questions</h2>
             <p data-i18n="faq_sub">Everything you need to know about MCF</p>
         </div>
-        
         <div class="faq-grid">
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
@@ -487,7 +435,6 @@
                     <p data-i18n="faq1_a">MCF (Monaco Capital Frank) is a premium token on the Solana blockchain, inspired by the financial heritage of Monaco. With a total supply of 10B and a 0.25% commission for development.</p>
                 </div>
             </div>
-            
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
                     <span data-i18n="faq2_q">How to buy MCF?</span>
@@ -497,7 +444,6 @@
                     <p data-i18n="faq2_a">You can buy MCF through Jupiter, Meteora or Raydium. Connect your Phantom wallet, select MCF/USDC or MCF/SOL pair and make an exchange.</p>
                 </div>
             </div>
-            
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
                     <span data-i18n="faq3_q">What is the transfer fee for MCF?</span>
@@ -507,7 +453,6 @@
                     <p data-i18n="faq3_a">Transfer fee is 0.25%. These funds are directed to project development, marketing and listings, ensuring sustainable growth of the ecosystem.</p>
                 </div>
             </div>
-            
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
                     <span data-i18n="faq4_q">Where to store MCF?</span>
@@ -517,7 +462,6 @@
                     <p data-i18n="faq4_a">You can store MCF in any Solana wallet: Phantom, Solflare, Backpack. Just add the token by Mint Address: 33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX</p>
                 </div>
             </div>
-            
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
                     <span data-i18n="faq5_q">What is the MCF ecosystem?</span>
@@ -527,7 +471,6 @@
                     <p data-i18n="faq5_a">MCF is inspired by the ecosystem of Edmond de Rothschild Monaco — private banking, capital management, real estate investments, yachts and luxury services.</p>
                 </div>
             </div>
-            
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
                     <span data-i18n="faq6_q">When is the listing on exchanges?</span>
@@ -541,7 +484,7 @@
     </section>
 
     <!-- ПОДПИСКА -->
-    <section class="subscribe-section" style="background-image: url('images/monaco-city.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <section class="subscribe-section" style="background-image: url('monaco-city.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="subscribe-overlay"></div>
         <div class="subscribe-content">
             <h2 data-i18n="subscribe_title">📬 Stay Informed</h2>
@@ -563,7 +506,7 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <div class="footer-logo">
-                    <img src="images/mcf_logo.png" alt="MCF" width="40">
+                    <img src="mcf_logo.png" alt="MCF" width="40">
                     <span>MCF</span>
                 </div>
                 <p data-i18n="footer_desc">Monaco Capital Frank — premium token on Solana, inspired by the financial heritage of Monaco.</p>
@@ -602,7 +545,7 @@
 
     <!-- НИЖНЯЯ БЕГУЩАЯ СТРОКА -->
     <div class="news-ticker">
-        <div class="news-ticker-content" id="newsTicker">
+        <div class="news-ticker-content">
             <span>📰 <span data-i18n="news_label">News:</span></span>
             <span>🔹 MCF launches on Meteora — trading starts in 24 hours</span>
             <span>🔹 Partnership with Monte Carlo Sotheby's — exclusive offers</span>
@@ -611,21 +554,20 @@
             <span>🔹 MCF community exceeded 10,000 members</span>
             <span>🔹 Next stop — CoinMarketCap</span>
             <span>🔹 MCF Staking launched — up to 15% APY</span>
-            <span>🔹 Jupiter integration completed</span>
         </div>
     </div>
 
     <!-- КНОПКА НАВЕРХ -->
     <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">⬆</button>
 
-    <!-- СКРИПТЫ -->
+    <!-- СКРИПТЫ (ВСЁ В КОРНЕ) -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/counters.js"></script>
-    <script src="js/ticker.js"></script>
-    <script src="js/language.js"></script>
-    <script src="js/chart.js"></script>
-    <script src="js/main.js"></script>
+    <script src="particles.js"></script>
+    <script src="counters.js"></script>
+    <script src="ticker.js"></script>
+    <script src="language.js"></script>
+    <script src="chart.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>

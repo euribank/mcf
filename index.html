@@ -1214,6 +1214,45 @@
         .contact-form textarea { resize: vertical; }
 
         /* ============================================================
+           PARTNERS TICKER
+           ============================================================ */
+        .partners-ticker-wrap {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(13, 13, 26, 0.9);
+            padding: 20px 0;
+            border-top: 2px solid var(--mcf-gold);
+            border-bottom: 2px solid var(--mcf-gold);
+            margin: 20px 0;
+        }
+        .partners-ticker {
+            display: flex;
+            gap: 40px;
+            white-space: nowrap;
+            animation: partnersScroll 60s linear infinite;
+            width: max-content;
+        }
+        .partners-ticker .partner-logo {
+            height: 40px;
+            width: auto;
+            max-width: 100px;
+            object-fit: contain;
+            filter: grayscale(1) brightness(0.7);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .partners-ticker .partner-logo:hover {
+            filter: grayscale(0) brightness(1);
+            transform: scale(1.1);
+        }
+        @keyframes partnersScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ============================================================
            FOOTER
            ============================================================ */
         .footer {
@@ -1377,6 +1416,7 @@
             .staking-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
             .price-stats { grid-template-columns: repeat(2, 1fr); }
+            .partners-ticker .partner-logo { height: 30px; max-width: 70px; }
         }
 
         @media (max-width: 768px) {
@@ -1424,6 +1464,15 @@
             .whitepaper-content { padding: 24px; }
             .ecosystem-stats { flex-direction: column; gap: 16px; }
             .footer { padding: 30px 20px 20px; }
+            .partners-ticker-wrap { padding: 12px 0; }
+            .partners-ticker { gap: 20px; animation-duration: 40s; }
+            .partners-ticker .partner-logo { height: 25px; max-width: 50px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title { font-size: 30px; }
+            .partners-ticker .partner-logo { height: 20px; max-width: 40px; }
+            .partners-ticker { gap: 12px; animation-duration: 30s; }
         }
     </style>
 </head>
@@ -2059,6 +2108,76 @@
     </section>
 
     <!-- ========================================================= -->
+    <!-- БЕГУЩАЯ СТРОКА ПАРТНЁРОВ (ЛОГОТИПЫ)                    -->
+    <!-- ========================================================= -->
+    <div class="partners-ticker-wrap">
+        <div class="partners-ticker">
+            <!-- ЛОГОТИПЫ ПАРТНЁРОВ -->
+            <img src="https://www.edmond-de-rothschild.com/favicon.ico" alt="Edmond de Rothschild" class="partner-logo" title="Edmond de Rothschild">
+            <img src="https://www.bnpparibas.com/favicon.ico" alt="BNP Paribas" class="partner-logo" title="BNP Paribas">
+            <img src="https://www.societegenerale.com/favicon.ico" alt="Société Générale" class="partner-logo" title="Société Générale">
+            <img src="https://www.ubs.com/favicon.ico" alt="UBS" class="partner-logo" title="UBS">
+            <img src="https://www.credit-suisse.com/favicon.ico" alt="Credit Suisse" class="partner-logo" title="Credit Suisse">
+            <img src="https://www.jpmorgan.com/favicon.ico" alt="JPMorgan" class="partner-logo" title="JPMorgan">
+            <img src="https://www.morganstanley.com/favicon.ico" alt="Morgan Stanley" class="partner-logo" title="Morgan Stanley">
+            <img src="https://www.goldmansachs.com/favicon.ico" alt="Goldman Sachs" class="partner-logo" title="Goldman Sachs">
+            <img src="https://www.hsbc.com/favicon.ico" alt="HSBC" class="partner-logo" title="HSBC">
+            <img src="https://www.lazard.com/favicon.ico" alt="Lazard" class="partner-logo" title="Lazard">
+            <img src="https://www.casinomontecarlo.com/favicon.ico" alt="Monte Carlo Casino" class="partner-logo" title="Monte Carlo Casino">
+            <img src="https://www.yacht-club-monaco.mc/favicon.ico" alt="Yacht Club Monaco" class="partner-logo" title="Yacht Club Monaco">
+            <img src="https://www.montecarlosothebysir.com/favicon.ico" alt="Sotheby's Monaco" class="partner-logo" title="Sotheby's Monaco">
+            <img src="https://www.sbm.mc/favicon.ico" alt="SBM Group" class="partner-logo" title="SBM Group">
+            <img src="https://www.grimaldiforum.com/favicon.ico" alt="Grimaldi Forum" class="partner-logo" title="Grimaldi Forum">
+            <img src="https://www.monaco-telecom.mc/favicon.ico" alt="Monaco Telecom" class="partner-logo" title="Monaco Telecom">
+            <img src="https://www.opera.mc/favicon.ico" alt="Monte Carlo Opera" class="partner-logo" title="Monte Carlo Opera">
+            <img src="https://www.gouv.mc/favicon.ico" alt="Monaco Government" class="partner-logo" title="Monaco Government">
+            <img src="https://www.visitmonaco.com/favicon.ico" alt="Monaco Tourism" class="partner-logo" title="Monaco Tourism">
+            <img src="https://www.monacoyachtshow.com/favicon.ico" alt="Monaco Yacht Show" class="partner-logo" title="Monaco Yacht Show">
+            <img src="https://www.chpg.mc/favicon.ico" alt="Princess Grace Hospital" class="partner-logo" title="Princess Grace Hospital">
+            <img src="https://www.montecarlobeach.com/favicon.ico" alt="Monte Carlo Beach" class="partner-logo" title="Monte Carlo Beach">
+            <img src="https://www.formula1.com/favicon.ico" alt="Monaco Grand Prix" class="partner-logo" title="Monaco Grand Prix">
+            <img src="https://www.golfmontecarlo.com/favicon.ico" alt="Monte Carlo Golf" class="partner-logo" title="Monte Carlo Golf">
+            <img src="https://www.asmonaco.basketball/favicon.ico" alt="Monaco Basket" class="partner-logo" title="Monaco Basket">
+            <img src="https://www.asmonaco.com/favicon.ico" alt="Monaco Football" class="partner-logo" title="Monaco Football">
+            <img src="https://www.montecarlotv.com/favicon.ico" alt="Monte Carlo TV" class="partner-logo" title="Monte Carlo TV">
+            <img src="https://www.radioriviera.mc/favicon.ico" alt="Monaco Radio" class="partner-logo" title="Monaco Radio">
+            <img src="https://www.opmc.mc/favicon.ico" alt="Monaco Philharmonic" class="partner-logo" title="Monaco Philharmonic">
+            <img src="https://www.balletsdemontecarlo.com/favicon.ico" alt="Monaco Dance" class="partner-logo" title="Monaco Dance">
+            <!-- ПОВТОР ДЛЯ БЕСКОНЕЧНОСТИ -->
+            <img src="https://www.edmond-de-rothschild.com/favicon.ico" alt="Edmond de Rothschild" class="partner-logo" title="Edmond de Rothschild">
+            <img src="https://www.bnpparibas.com/favicon.ico" alt="BNP Paribas" class="partner-logo" title="BNP Paribas">
+            <img src="https://www.societegenerale.com/favicon.ico" alt="Société Générale" class="partner-logo" title="Société Générale">
+            <img src="https://www.ubs.com/favicon.ico" alt="UBS" class="partner-logo" title="UBS">
+            <img src="https://www.credit-suisse.com/favicon.ico" alt="Credit Suisse" class="partner-logo" title="Credit Suisse">
+            <img src="https://www.jpmorgan.com/favicon.ico" alt="JPMorgan" class="partner-logo" title="JPMorgan">
+            <img src="https://www.morganstanley.com/favicon.ico" alt="Morgan Stanley" class="partner-logo" title="Morgan Stanley">
+            <img src="https://www.goldmansachs.com/favicon.ico" alt="Goldman Sachs" class="partner-logo" title="Goldman Sachs">
+            <img src="https://www.hsbc.com/favicon.ico" alt="HSBC" class="partner-logo" title="HSBC">
+            <img src="https://www.lazard.com/favicon.ico" alt="Lazard" class="partner-logo" title="Lazard">
+            <img src="https://www.casinomontecarlo.com/favicon.ico" alt="Monte Carlo Casino" class="partner-logo" title="Monte Carlo Casino">
+            <img src="https://www.yacht-club-monaco.mc/favicon.ico" alt="Yacht Club Monaco" class="partner-logo" title="Yacht Club Monaco">
+            <img src="https://www.montecarlosothebysir.com/favicon.ico" alt="Sotheby's Monaco" class="partner-logo" title="Sotheby's Monaco">
+            <img src="https://www.sbm.mc/favicon.ico" alt="SBM Group" class="partner-logo" title="SBM Group">
+            <img src="https://www.grimaldiforum.com/favicon.ico" alt="Grimaldi Forum" class="partner-logo" title="Grimaldi Forum">
+            <img src="https://www.monaco-telecom.mc/favicon.ico" alt="Monaco Telecom" class="partner-logo" title="Monaco Telecom">
+            <img src="https://www.opera.mc/favicon.ico" alt="Monte Carlo Opera" class="partner-logo" title="Monte Carlo Opera">
+            <img src="https://www.gouv.mc/favicon.ico" alt="Monaco Government" class="partner-logo" title="Monaco Government">
+            <img src="https://www.visitmonaco.com/favicon.ico" alt="Monaco Tourism" class="partner-logo" title="Monaco Tourism">
+            <img src="https://www.monacoyachtshow.com/favicon.ico" alt="Monaco Yacht Show" class="partner-logo" title="Monaco Yacht Show">
+            <img src="https://www.chpg.mc/favicon.ico" alt="Princess Grace Hospital" class="partner-logo" title="Princess Grace Hospital">
+            <img src="https://www.montecarlobeach.com/favicon.ico" alt="Monte Carlo Beach" class="partner-logo" title="Monte Carlo Beach">
+            <img src="https://www.formula1.com/favicon.ico" alt="Monaco Grand Prix" class="partner-logo" title="Monaco Grand Prix">
+            <img src="https://www.golfmontecarlo.com/favicon.ico" alt="Monte Carlo Golf" class="partner-logo" title="Monte Carlo Golf">
+            <img src="https://www.asmonaco.basketball/favicon.ico" alt="Monaco Basket" class="partner-logo" title="Monaco Basket">
+            <img src="https://www.asmonaco.com/favicon.ico" alt="Monaco Football" class="partner-logo" title="Monaco Football">
+            <img src="https://www.montecarlotv.com/favicon.ico" alt="Monte Carlo TV" class="partner-logo" title="Monte Carlo TV">
+            <img src="https://www.radioriviera.mc/favicon.ico" alt="Monaco Radio" class="partner-logo" title="Monaco Radio">
+            <img src="https://www.opmc.mc/favicon.ico" alt="Monaco Philharmonic" class="partner-logo" title="Monaco Philharmonic">
+            <img src="https://www.balletsdemontecarlo.com/favicon.ico" alt="Monaco Dance" class="partner-logo" title="Monaco Dance">
+        </div>
+    </div>
+
+    <!-- ========================================================= -->
     <!-- ФУТЕР                                                     -->
     <!-- ========================================================= -->
     <footer class="footer">
@@ -2129,7 +2248,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- ========================================================= -->
-    <!-- СКРИПТЫ — ВСЁ В ОДНОМ МЕСТЕ                               -->
+    <!-- СКРИПТЫ                                                   -->
     <!-- ========================================================= -->
     <script>
         // =========================================================
@@ -2344,7 +2463,7 @@
         }
 
         // =========================================================
-        // 8. NAVIGATION — ВСЕ ССЫЛКИ РАБОТАЮТ
+        // 8. NAVIGATION
         // =========================================================
         document.addEventListener('DOMContentLoaded', function() {
             

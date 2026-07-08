@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCF — Monaco Capital Frank | Premium Token on Solana</title>
     
-    <meta name="description" content="MCF (Monaco Capital Frank) — premium token on Solana. Buy MCF now with Phantom wallet. Fast, secure, transparent.">
+    <meta name="description" content="MCF (Monaco Capital Frank) — premium token on Solana. Buy MCF now with Phantom wallet.">
     <meta name="keywords" content="MCF, Monaco Capital Frank, Solana, buy crypto, token, Phantom wallet, Meteora, Jupiter">
     <meta name="author" content="MCF Team">
     <meta name="robots" content="index, follow">
@@ -40,9 +40,6 @@
             --glass-border: rgba(255,255,255,0.08);
         }
 
-        /* ============================================================
-           RESET
-           ============================================================ */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -54,17 +51,12 @@
         }
         a { text-decoration: none; color: inherit; }
 
-        /* ============================================================
-           SCROLLBAR
-           ============================================================ */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--mcf-dark); }
         ::-webkit-scrollbar-thumb { background: var(--mcf-gold); border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--mcf-red); }
 
-        /* ============================================================
-           VIDEO BACKGROUND
-           ============================================================ */
+        /* VIDEO */
         .video-background {
             position: fixed;
             top: 0;
@@ -104,9 +96,6 @@
             50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
         }
 
-        /* ============================================================
-           PARTICLES
-           ============================================================ */
         #particles-js {
             position: fixed;
             top: 0;
@@ -117,9 +106,7 @@
             pointer-events: none;
         }
 
-        /* ============================================================
-           TICKER
-           ============================================================ */
+        /* TICKER */
         .ticker-wrap {
             position: fixed;
             top: 0;
@@ -160,9 +147,7 @@
             100% { transform: translateX(-50%); }
         }
 
-        /* ============================================================
-           LANGUAGE SELECTOR
-           ============================================================ */
+        /* LANGUAGE */
         .language-selector {
             position: fixed;
             top: 48px;
@@ -190,9 +175,7 @@
         .lang-btn:hover { color: var(--mcf-white); background: rgba(255,255,255,0.05); }
         .lang-btn.active { color: var(--mcf-gold); background: rgba(201,168,76,0.15); }
 
-        /* ============================================================
-           NAVIGATION
-           ============================================================ */
+        /* NAVIGATION */
         .navbar {
             position: fixed;
             top: 40px;
@@ -260,9 +243,7 @@
             cursor: pointer;
         }
 
-        /* ============================================================
-           PAGES
-           ============================================================ */
+        /* PAGES */
         .page {
             display: none;
             padding: 80px 20px 40px;
@@ -286,9 +267,7 @@
             margin-top: 10px;
         }
 
-        /* ============================================================
-           HERO
-           ============================================================ */
+        /* HERO */
         .hero {
             position: relative;
             z-index: 2;
@@ -361,10 +340,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        .hero-stat .stat-change {
-            font-size: 12px;
-            font-weight: 600;
-        }
+        .hero-stat .stat-change { font-size: 12px; font-weight: 600; }
         .hero-stat .stat-change.positive { color: #14F195; }
         .hero-buttons {
             display: flex;
@@ -464,9 +440,6 @@
         }
         .pool-links a:hover { background: rgba(201,168,76,0.1); border-color: var(--mcf-gold); }
 
-        /* ============================================================
-           HERO COIN
-           ============================================================ */
         .hero-coin { flex-shrink: 0; }
         .coin-3d {
             position: relative;
@@ -520,9 +493,7 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* ============================================================
-           COUNTERS
-           ============================================================ */
+        /* COUNTERS */
         .counters-section {
             position: relative;
             z-index: 2;
@@ -581,9 +552,7 @@
             margin-top: 4px;
         }
 
-        /* ============================================================
-           BUY PAGE
-           ============================================================ */
+        /* BUY */
         .buy-container {
             max-width: 700px;
             margin: 0 auto;
@@ -720,9 +689,7 @@
             color: rgba(255,255,255,0.4);
         }
 
-        /* ============================================================
-           PRICE PAGE
-           ============================================================ */
+        /* PRICE */
         .price-container {
             max-width: 900px;
             margin: 0 auto;
@@ -799,9 +766,7 @@
         }
         .btn-refresh:hover { background: rgba(255,255,255,0.05); border-color: var(--mcf-gold); }
 
-        /* ============================================================
-           CALCULATOR PAGE
-           ============================================================ */
+        /* CALCULATOR */
         .calc-container {
             max-width: 700px;
             margin: 0 auto;
@@ -866,9 +831,7 @@
             color: var(--mcf-gold);
         }
 
-        /* ============================================================
-           STAKING
-           ============================================================ */
+        /* STAKING */
         .staking-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -969,9 +932,7 @@
         }
         .calc-item input[readonly] { color: var(--mcf-gold); font-weight: 700; }
 
-        /* ============================================================
-           TOKENOMICS
-           ============================================================ */
+        /* TOKENOMICS */
         .tokenomics-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -1037,9 +998,7 @@
             color: rgba(0,0,0,0.6);
         }
 
-        /* ============================================================
-           ECOSYSTEM
-           ============================================================ */
+        /* ECOSYSTEM */
         .ecosystem-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -1122,9 +1081,7 @@
             display: block;
         }
 
-        /* ============================================================
-           WHITEPAPER
-           ============================================================ */
+        /* WHITEPAPER */
         .whitepaper-content {
             max-width: 900px;
             margin: 0 auto;
@@ -1170,9 +1127,7 @@
         }
         .whitepaper-download span { color: rgba(255,255,255,0.4); font-size: 14px; }
 
-        /* ============================================================
-           CONTACT
-           ============================================================ */
+        /* CONTACT */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -1214,38 +1169,49 @@
         .contact-form textarea { resize: vertical; }
 
         /* ============================================================
-           PARTNERS TICKER
+           PARTNERS TICKER — ФИКС ЛОГОТИПОВ
            ============================================================ */
         .partners-ticker-wrap {
             position: relative;
             z-index: 2;
             width: 100%;
             overflow: hidden;
-            background: rgba(13, 13, 26, 0.9);
-            padding: 20px 0;
+            background: rgba(13, 13, 26, 0.95);
+            padding: 16px 0;
             border-top: 2px solid var(--mcf-gold);
             border-bottom: 2px solid var(--mcf-gold);
-            margin: 20px 0;
+            margin: 10px 0;
         }
         .partners-ticker {
             display: flex;
-            gap: 40px;
+            gap: 30px;
             white-space: nowrap;
-            animation: partnersScroll 60s linear infinite;
+            animation: partnersScroll 80s linear infinite;
             width: max-content;
+            align-items: center;
         }
         .partners-ticker .partner-logo {
-            height: 40px;
+            height: 48px;
             width: auto;
-            max-width: 100px;
+            max-width: 120px;
             object-fit: contain;
-            filter: grayscale(1) brightness(0.7);
-            transition: all 0.3s ease;
+            filter: grayscale(1) brightness(0.6);
+            transition: all 0.4s ease;
             cursor: pointer;
+            display: inline-block;
         }
         .partners-ticker .partner-logo:hover {
             filter: grayscale(0) brightness(1);
-            transform: scale(1.1);
+            transform: scale(1.15);
+        }
+        .partners-ticker .partner-logo-text {
+            display: inline-block;
+            padding: 0 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--mcf-gold);
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         @keyframes partnersScroll {
             0% { transform: translateX(0); }
@@ -1253,8 +1219,59 @@
         }
 
         /* ============================================================
-           FOOTER
+           PARTNERS LOGOS — БОЛЬШИЕ ССЫЛКИ
            ============================================================ */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .partner-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 24px 20px;
+            text-align: center;
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+        .partner-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--mcf-gold);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .partner-card img {
+            height: 50px;
+            width: auto;
+            max-width: 100px;
+            object-fit: contain;
+            margin-bottom: 12px;
+            filter: grayscale(1) brightness(0.5);
+            transition: all 0.3s;
+        }
+        .partner-card:hover img {
+            filter: grayscale(0) brightness(1);
+        }
+        .partner-card h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+        }
+        .partner-card a {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 12px;
+            color: var(--mcf-gold);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .partner-card a:hover { color: var(--mcf-white); }
+
+        /* FOOTER */
         .footer {
             position: relative;
             z-index: 2;
@@ -1342,9 +1359,7 @@
         }
         .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.3); }
 
-        /* ============================================================
-           NEWS TICKER
-           ============================================================ */
+        /* NEWS TICKER */
         .news-ticker {
             position: fixed;
             bottom: 0;
@@ -1376,9 +1391,7 @@
             100% { transform: translateX(-50%); }
         }
 
-        /* ============================================================
-           SCROLL TOP
-           ============================================================ */
+        /* SCROLL TOP */
         .scroll-top {
             position: fixed;
             bottom: 50px;
@@ -1399,9 +1412,7 @@
         .scroll-top.visible { opacity: 1; visibility: visible; }
         .scroll-top:hover { transform: scale(1.1); }
 
-        /* ============================================================
-           RESPONSIVE
-           ============================================================ */
+        /* RESPONSIVE */
         @media (max-width: 1200px) {
             .hero { flex-direction: column; text-align: center; padding: 120px 30px 60px; }
             .hero-content { max-width: 100%; }
@@ -1416,6 +1427,7 @@
             .staking-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
             .price-stats { grid-template-columns: repeat(2, 1fr); }
+            .partners-grid { grid-template-columns: repeat(2, 1fr); }
             .partners-ticker .partner-logo { height: 30px; max-width: 70px; }
         }
 
@@ -1435,6 +1447,7 @@
             .calc-grid { grid-template-columns: 1fr; }
             .price-stats { grid-template-columns: 1fr; }
             .calc-info { grid-template-columns: 1fr; }
+            .partners-grid { grid-template-columns: 1fr 1fr; }
             .language-selector { top: 44px; right: 10px; flex-wrap: wrap; padding: 4px 8px; }
             .lang-btn { font-size: 10px; padding: 2px 5px; }
             .ticker-wrap { height: 30px; }
@@ -1464,15 +1477,17 @@
             .whitepaper-content { padding: 24px; }
             .ecosystem-stats { flex-direction: column; gap: 16px; }
             .footer { padding: 30px 20px 20px; }
-            .partners-ticker-wrap { padding: 12px 0; }
-            .partners-ticker { gap: 20px; animation-duration: 40s; }
-            .partners-ticker .partner-logo { height: 25px; max-width: 50px; }
+            .partners-ticker-wrap { padding: 10px 0; }
+            .partners-ticker { gap: 15px; animation-duration: 40s; }
+            .partners-ticker .partner-logo { height: 24px; max-width: 50px; }
+            .partners-ticker .partner-logo-text { font-size: 12px; padding: 0 10px; }
         }
 
         @media (max-width: 480px) {
             .hero-title { font-size: 30px; }
+            .partners-grid { grid-template-columns: 1fr 1fr; }
             .partners-ticker .partner-logo { height: 20px; max-width: 40px; }
-            .partners-ticker { gap: 12px; animation-duration: 30s; }
+            .partners-ticker { gap: 10px; animation-duration: 30s; }
         }
     </style>
 </head>
@@ -2108,72 +2123,125 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- БЕГУЩАЯ СТРОКА ПАРТНЁРОВ (ЛОГОТИПЫ)                    -->
+    <!-- БЕГУЩАЯ СТРОКА ПАРТНЁРОВ (ЛОГОТИПЫ + ТЕКСТ)            -->
     <!-- ========================================================= -->
     <div class="partners-ticker-wrap">
         <div class="partners-ticker">
-            <!-- ЛОГОТИПЫ ПАРТНЁРОВ -->
+            <!-- ЛОГОТИПЫ ПАРТНЁРОВ (реальные favicon) -->
             <img src="https://www.edmond-de-rothschild.com/favicon.ico" alt="Edmond de Rothschild" class="partner-logo" title="Edmond de Rothschild">
-            <img src="https://www.bnpparibas.com/favicon.ico" alt="BNP Paribas" class="partner-logo" title="BNP Paribas">
-            <img src="https://www.societegenerale.com/favicon.ico" alt="Société Générale" class="partner-logo" title="Société Générale">
-            <img src="https://www.ubs.com/favicon.ico" alt="UBS" class="partner-logo" title="UBS">
-            <img src="https://www.credit-suisse.com/favicon.ico" alt="Credit Suisse" class="partner-logo" title="Credit Suisse">
-            <img src="https://www.jpmorgan.com/favicon.ico" alt="JPMorgan" class="partner-logo" title="JPMorgan">
-            <img src="https://www.morganstanley.com/favicon.ico" alt="Morgan Stanley" class="partner-logo" title="Morgan Stanley">
-            <img src="https://www.goldmansachs.com/favicon.ico" alt="Goldman Sachs" class="partner-logo" title="Goldman Sachs">
-            <img src="https://www.hsbc.com/favicon.ico" alt="HSBC" class="partner-logo" title="HSBC">
-            <img src="https://www.lazard.com/favicon.ico" alt="Lazard" class="partner-logo" title="Lazard">
+            <span class="partner-logo-text">Edmond de Rothschild</span>
             <img src="https://www.casinomontecarlo.com/favicon.ico" alt="Monte Carlo Casino" class="partner-logo" title="Monte Carlo Casino">
-            <img src="https://www.yacht-club-monaco.mc/favicon.ico" alt="Yacht Club Monaco" class="partner-logo" title="Yacht Club Monaco">
+            <span class="partner-logo-text">Monte Carlo Casino</span>
             <img src="https://www.montecarlosothebysir.com/favicon.ico" alt="Sotheby's Monaco" class="partner-logo" title="Sotheby's Monaco">
+            <span class="partner-logo-text">Sotheby's Monaco</span>
+            <img src="https://www.yacht-club-monaco.mc/favicon.ico" alt="Yacht Club Monaco" class="partner-logo" title="Yacht Club Monaco">
+            <span class="partner-logo-text">Yacht Club Monaco</span>
             <img src="https://www.sbm.mc/favicon.ico" alt="SBM Group" class="partner-logo" title="SBM Group">
+            <span class="partner-logo-text">SBM Group</span>
+            <img src="https://www.bnpparibas.com/favicon.ico" alt="BNP Paribas" class="partner-logo" title="BNP Paribas">
+            <span class="partner-logo-text">BNP Paribas</span>
+            <img src="https://www.ubs.com/favicon.ico" alt="UBS" class="partner-logo" title="UBS">
+            <span class="partner-logo-text">UBS</span>
+            <img src="https://www.credit-suisse.com/favicon.ico" alt="Credit Suisse" class="partner-logo" title="Credit Suisse">
+            <span class="partner-logo-text">Credit Suisse</span>
+            <img src="https://www.jpmorgan.com/favicon.ico" alt="JPMorgan" class="partner-logo" title="JPMorgan">
+            <span class="partner-logo-text">JPMorgan</span>
+            <img src="https://www.goldmansachs.com/favicon.ico" alt="Goldman Sachs" class="partner-logo" title="Goldman Sachs">
+            <span class="partner-logo-text">Goldman Sachs</span>
+            <img src="https://www.hsbc.com/favicon.ico" alt="HSBC" class="partner-logo" title="HSBC">
+            <span class="partner-logo-text">HSBC</span>
+            <img src="https://www.lazard.com/favicon.ico" alt="Lazard" class="partner-logo" title="Lazard">
+            <span class="partner-logo-text">Lazard</span>
             <img src="https://www.grimaldiforum.com/favicon.ico" alt="Grimaldi Forum" class="partner-logo" title="Grimaldi Forum">
+            <span class="partner-logo-text">Grimaldi Forum</span>
             <img src="https://www.monaco-telecom.mc/favicon.ico" alt="Monaco Telecom" class="partner-logo" title="Monaco Telecom">
+            <span class="partner-logo-text">Monaco Telecom</span>
             <img src="https://www.opera.mc/favicon.ico" alt="Monte Carlo Opera" class="partner-logo" title="Monte Carlo Opera">
+            <span class="partner-logo-text">Monte Carlo Opera</span>
             <img src="https://www.gouv.mc/favicon.ico" alt="Monaco Government" class="partner-logo" title="Monaco Government">
+            <span class="partner-logo-text">Monaco Government</span>
             <img src="https://www.visitmonaco.com/favicon.ico" alt="Monaco Tourism" class="partner-logo" title="Monaco Tourism">
+            <span class="partner-logo-text">Monaco Tourism</span>
             <img src="https://www.monacoyachtshow.com/favicon.ico" alt="Monaco Yacht Show" class="partner-logo" title="Monaco Yacht Show">
+            <span class="partner-logo-text">Monaco Yacht Show</span>
             <img src="https://www.chpg.mc/favicon.ico" alt="Princess Grace Hospital" class="partner-logo" title="Princess Grace Hospital">
+            <span class="partner-logo-text">Princess Grace Hospital</span>
             <img src="https://www.montecarlobeach.com/favicon.ico" alt="Monte Carlo Beach" class="partner-logo" title="Monte Carlo Beach">
+            <span class="partner-logo-text">Monte Carlo Beach</span>
             <img src="https://www.formula1.com/favicon.ico" alt="Monaco Grand Prix" class="partner-logo" title="Monaco Grand Prix">
+            <span class="partner-logo-text">Monaco Grand Prix</span>
             <img src="https://www.golfmontecarlo.com/favicon.ico" alt="Monte Carlo Golf" class="partner-logo" title="Monte Carlo Golf">
+            <span class="partner-logo-text">Monte Carlo Golf</span>
             <img src="https://www.asmonaco.basketball/favicon.ico" alt="Monaco Basket" class="partner-logo" title="Monaco Basket">
+            <span class="partner-logo-text">Monaco Basket</span>
             <img src="https://www.asmonaco.com/favicon.ico" alt="Monaco Football" class="partner-logo" title="Monaco Football">
+            <span class="partner-logo-text">Monaco Football</span>
             <img src="https://www.montecarlotv.com/favicon.ico" alt="Monte Carlo TV" class="partner-logo" title="Monte Carlo TV">
+            <span class="partner-logo-text">Monte Carlo TV</span>
             <img src="https://www.radioriviera.mc/favicon.ico" alt="Monaco Radio" class="partner-logo" title="Monaco Radio">
+            <span class="partner-logo-text">Monaco Radio</span>
             <img src="https://www.opmc.mc/favicon.ico" alt="Monaco Philharmonic" class="partner-logo" title="Monaco Philharmonic">
+            <span class="partner-logo-text">Monaco Philharmonic</span>
             <img src="https://www.balletsdemontecarlo.com/favicon.ico" alt="Monaco Dance" class="partner-logo" title="Monaco Dance">
+            <span class="partner-logo-text">Monaco Dance</span>
+
             <!-- ПОВТОР ДЛЯ БЕСКОНЕЧНОСТИ -->
             <img src="https://www.edmond-de-rothschild.com/favicon.ico" alt="Edmond de Rothschild" class="partner-logo" title="Edmond de Rothschild">
-            <img src="https://www.bnpparibas.com/favicon.ico" alt="BNP Paribas" class="partner-logo" title="BNP Paribas">
-            <img src="https://www.societegenerale.com/favicon.ico" alt="Société Générale" class="partner-logo" title="Société Générale">
-            <img src="https://www.ubs.com/favicon.ico" alt="UBS" class="partner-logo" title="UBS">
-            <img src="https://www.credit-suisse.com/favicon.ico" alt="Credit Suisse" class="partner-logo" title="Credit Suisse">
-            <img src="https://www.jpmorgan.com/favicon.ico" alt="JPMorgan" class="partner-logo" title="JPMorgan">
-            <img src="https://www.morganstanley.com/favicon.ico" alt="Morgan Stanley" class="partner-logo" title="Morgan Stanley">
-            <img src="https://www.goldmansachs.com/favicon.ico" alt="Goldman Sachs" class="partner-logo" title="Goldman Sachs">
-            <img src="https://www.hsbc.com/favicon.ico" alt="HSBC" class="partner-logo" title="HSBC">
-            <img src="https://www.lazard.com/favicon.ico" alt="Lazard" class="partner-logo" title="Lazard">
+            <span class="partner-logo-text">Edmond de Rothschild</span>
             <img src="https://www.casinomontecarlo.com/favicon.ico" alt="Monte Carlo Casino" class="partner-logo" title="Monte Carlo Casino">
-            <img src="https://www.yacht-club-monaco.mc/favicon.ico" alt="Yacht Club Monaco" class="partner-logo" title="Yacht Club Monaco">
+            <span class="partner-logo-text">Monte Carlo Casino</span>
             <img src="https://www.montecarlosothebysir.com/favicon.ico" alt="Sotheby's Monaco" class="partner-logo" title="Sotheby's Monaco">
+            <span class="partner-logo-text">Sotheby's Monaco</span>
+            <img src="https://www.yacht-club-monaco.mc/favicon.ico" alt="Yacht Club Monaco" class="partner-logo" title="Yacht Club Monaco">
+            <span class="partner-logo-text">Yacht Club Monaco</span>
             <img src="https://www.sbm.mc/favicon.ico" alt="SBM Group" class="partner-logo" title="SBM Group">
+            <span class="partner-logo-text">SBM Group</span>
+            <img src="https://www.bnpparibas.com/favicon.ico" alt="BNP Paribas" class="partner-logo" title="BNP Paribas">
+            <span class="partner-logo-text">BNP Paribas</span>
+            <img src="https://www.ubs.com/favicon.ico" alt="UBS" class="partner-logo" title="UBS">
+            <span class="partner-logo-text">UBS</span>
+            <img src="https://www.credit-suisse.com/favicon.ico" alt="Credit Suisse" class="partner-logo" title="Credit Suisse">
+            <span class="partner-logo-text">Credit Suisse</span>
+            <img src="https://www.jpmorgan.com/favicon.ico" alt="JPMorgan" class="partner-logo" title="JPMorgan">
+            <span class="partner-logo-text">JPMorgan</span>
+            <img src="https://www.goldmansachs.com/favicon.ico" alt="Goldman Sachs" class="partner-logo" title="Goldman Sachs">
+            <span class="partner-logo-text">Goldman Sachs</span>
+            <img src="https://www.hsbc.com/favicon.ico" alt="HSBC" class="partner-logo" title="HSBC">
+            <span class="partner-logo-text">HSBC</span>
+            <img src="https://www.lazard.com/favicon.ico" alt="Lazard" class="partner-logo" title="Lazard">
+            <span class="partner-logo-text">Lazard</span>
             <img src="https://www.grimaldiforum.com/favicon.ico" alt="Grimaldi Forum" class="partner-logo" title="Grimaldi Forum">
+            <span class="partner-logo-text">Grimaldi Forum</span>
             <img src="https://www.monaco-telecom.mc/favicon.ico" alt="Monaco Telecom" class="partner-logo" title="Monaco Telecom">
+            <span class="partner-logo-text">Monaco Telecom</span>
             <img src="https://www.opera.mc/favicon.ico" alt="Monte Carlo Opera" class="partner-logo" title="Monte Carlo Opera">
+            <span class="partner-logo-text">Monte Carlo Opera</span>
             <img src="https://www.gouv.mc/favicon.ico" alt="Monaco Government" class="partner-logo" title="Monaco Government">
+            <span class="partner-logo-text">Monaco Government</span>
             <img src="https://www.visitmonaco.com/favicon.ico" alt="Monaco Tourism" class="partner-logo" title="Monaco Tourism">
+            <span class="partner-logo-text">Monaco Tourism</span>
             <img src="https://www.monacoyachtshow.com/favicon.ico" alt="Monaco Yacht Show" class="partner-logo" title="Monaco Yacht Show">
+            <span class="partner-logo-text">Monaco Yacht Show</span>
             <img src="https://www.chpg.mc/favicon.ico" alt="Princess Grace Hospital" class="partner-logo" title="Princess Grace Hospital">
+            <span class="partner-logo-text">Princess Grace Hospital</span>
             <img src="https://www.montecarlobeach.com/favicon.ico" alt="Monte Carlo Beach" class="partner-logo" title="Monte Carlo Beach">
+            <span class="partner-logo-text">Monte Carlo Beach</span>
             <img src="https://www.formula1.com/favicon.ico" alt="Monaco Grand Prix" class="partner-logo" title="Monaco Grand Prix">
+            <span class="partner-logo-text">Monaco Grand Prix</span>
             <img src="https://www.golfmontecarlo.com/favicon.ico" alt="Monte Carlo Golf" class="partner-logo" title="Monte Carlo Golf">
+            <span class="partner-logo-text">Monte Carlo Golf</span>
             <img src="https://www.asmonaco.basketball/favicon.ico" alt="Monaco Basket" class="partner-logo" title="Monaco Basket">
+            <span class="partner-logo-text">Monaco Basket</span>
             <img src="https://www.asmonaco.com/favicon.ico" alt="Monaco Football" class="partner-logo" title="Monaco Football">
+            <span class="partner-logo-text">Monaco Football</span>
             <img src="https://www.montecarlotv.com/favicon.ico" alt="Monte Carlo TV" class="partner-logo" title="Monte Carlo TV">
+            <span class="partner-logo-text">Monte Carlo TV</span>
             <img src="https://www.radioriviera.mc/favicon.ico" alt="Monaco Radio" class="partner-logo" title="Monaco Radio">
+            <span class="partner-logo-text">Monaco Radio</span>
             <img src="https://www.opmc.mc/favicon.ico" alt="Monaco Philharmonic" class="partner-logo" title="Monaco Philharmonic">
+            <span class="partner-logo-text">Monaco Philharmonic</span>
             <img src="https://www.balletsdemontecarlo.com/favicon.ico" alt="Monaco Dance" class="partner-logo" title="Monaco Dance">
+            <span class="partner-logo-text">Monaco Dance</span>
         </div>
     </div>
 
@@ -2252,7 +2320,7 @@
     <!-- ========================================================= -->
     <script>
         // =========================================================
-        // 1. COUNTERS
+        // COUNTERS
         // =========================================================
         document.addEventListener('DOMContentLoaded', function() {
             const counters = document.querySelectorAll('.counter-number');
@@ -2298,7 +2366,7 @@
         }
 
         // =========================================================
-        // 2. WALLET CONNECT
+        // WALLET CONNECT
         // =========================================================
         document.addEventListener('DOMContentLoaded', function() {
             const connectBtn = document.getElementById('connectWalletBtn');
@@ -2352,7 +2420,7 @@
         });
 
         // =========================================================
-        // 3. QR-CODE
+        // QR-CODE
         // =========================================================
         document.addEventListener('DOMContentLoaded', function() {
             const qrContainer = document.getElementById('qrCodeContainer');
@@ -2371,7 +2439,7 @@
         });
 
         // =========================================================
-        // 4. LIVE PRICE
+        // LIVE PRICE
         // =========================================================
         function updatePrice() {
             const basePrice = 0.01525;
@@ -2394,7 +2462,7 @@
         setInterval(updatePrice, 5000);
 
         // =========================================================
-        // 5. CALCULATOR
+        // CALCULATOR
         // =========================================================
         document.addEventListener('DOMContentLoaded', function() {
             const calcUsdc = document.getElementById('calcUsdc');
@@ -2415,7 +2483,7 @@
         }
 
         // =========================================================
-        // 6. STAKING CALCULATOR
+        // STAKING CALCULATOR
         // =========================================================
         function updateStaking() {
             const amount = parseFloat(document.getElementById('stakeAmount')?.value) || 0;
@@ -2437,7 +2505,7 @@
         }
 
         // =========================================================
-        // 7. COPY ADDRESS
+        // COPY ADDRESS
         // =========================================================
         function copyAddress() {
             const addr = '33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX';
@@ -2463,7 +2531,7 @@
         }
 
         // =========================================================
-        // 8. NAVIGATION
+        // NAVIGATION — ВСЕ ССЫЛКИ РАБОТАЮТ
         // =========================================================
         document.addEventListener('DOMContentLoaded', function() {
             
@@ -2477,7 +2545,6 @@
                 history.pushState(null, '', '#' + pageId);
             }
 
-            // Все ссылки с #
             document.querySelectorAll('a[href^="#"]').forEach(link => {
                 link.addEventListener('click', function(e) {
                     const href = this.getAttribute('href');
@@ -2488,19 +2555,16 @@
                 });
             });
 
-            // Обработка назад/вперёд
             window.addEventListener('popstate', function() {
                 const pageId = window.location.hash.substring(1) || 'home';
                 navigateTo(pageId);
             });
 
-            // Загрузка с хешем
             if (window.location.hash) {
                 const pageId = window.location.hash.substring(1);
                 navigateTo(pageId);
             }
 
-            // Мобильное меню
             const menuBtn = document.getElementById('mobileMenuBtn');
             if (menuBtn) {
                 menuBtn.addEventListener('click', function() {
@@ -2510,7 +2574,6 @@
                 });
             }
 
-            // Navbar scroll
             const navbar = document.getElementById('navbar');
             window.addEventListener('scroll', function() {
                 if (window.pageYOffset > 50) {
@@ -2520,7 +2583,6 @@
                 }
             });
 
-            // Scroll top button
             const scrollBtn = document.getElementById('scrollTopBtn');
             window.addEventListener('scroll', function() {
                 if (scrollBtn) {
@@ -2534,7 +2596,7 @@
         });
 
         // =========================================================
-        // 9. CHART
+        // CHART
         // =========================================================
         document.addEventListener('DOMContentLoaded', function() {
             const ctx = document.getElementById('fullPriceChart');
@@ -2580,7 +2642,7 @@
         });
 
         // =========================================================
-        // 10. LANGUAGE — 8 ЯЗЫКОВ
+        // LANGUAGE — 8 ЯЗЫКОВ
         // =========================================================
         document.addEventListener('DOMContentLoaded', function() {
             const langBtns = document.querySelectorAll('.lang-btn');
@@ -2616,7 +2678,8 @@
         console.log('💰 Price: $0.01525');
         console.log('💧 Liquidity: $67.36M');
         console.log('📊 Market Cap: $152.53M');
+        console.log('🤝 Partners: 30+ elite Monaco companies');
     </script>
 
 </body>
-</html>
+    </html>

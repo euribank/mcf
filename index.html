@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCF — Monaco Capital Frank | Premium Token on Solana</title>
     
-    <meta name="description" content="MCF (Monaco Capital Frank) — premium token on Solana. Buy MCF now with Phantom wallet.">
-    <meta name="keywords" content="MCF, Monaco Capital Frank, Solana, buy crypto, token, Phantom wallet, Meteora, Jupiter">
+    <meta name="description" content="MCF (Monaco Capital Frank) — premium token on Solana. Buy MCF now with Phantom wallet. Private Banking, Yachts, Casino VIP, Real Estate, Events.">
+    <meta name="keywords" content="MCF, Monaco Capital Frank, Solana, buy crypto, token, Phantom wallet, Meteora, Jupiter, Private Banking, Yacht, Casino">
     <meta name="author" content="MCF Team">
     <meta name="robots" content="index, follow">
     
@@ -212,10 +212,11 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 16px;
+            gap: 12px;
+            flex-wrap: wrap;
         }
         .nav-links a {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
             color: rgba(255,255,255,0.6);
             transition: color 0.3s;
@@ -1169,8 +1170,252 @@
         .contact-form textarea { resize: vertical; }
 
         /* ============================================================
-           PARTNERS TICKER — ФИКС ЛОГОТИПОВ
+           ФУНКЦИИ ДЛЯ БОГАТЫХ (5 УНИКАЛЬНЫХ)
            ============================================================ */
+
+        /* 1. PRIVATE BANKING CONCIERGE */
+        .private-concierge {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .concierge-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .concierge-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px 28px;
+            text-align: center;
+            transition: all 0.4s;
+        }
+        .concierge-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--mcf-gold);
+        }
+        .concierge-icon { font-size: 56px; margin-bottom: 12px; }
+        .concierge-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--mcf-gold);
+        }
+        .concierge-card p {
+            color: rgba(255,255,255,0.5);
+            font-size: 14px;
+        }
+        .concierge-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0 24px;
+            text-align: left;
+        }
+        .concierge-benefits li {
+            padding: 6px 0;
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        /* 2. YACHT & JET BOOKING */
+        .yacht-jet {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .yacht-jet-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .yacht-jet-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+        .yacht-jet-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--mcf-gold);
+        }
+        .yacht-jet-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        .yacht-jet-card h3 {
+            font-size: 20px;
+            padding: 16px 20px 0;
+        }
+        .yacht-jet-card p {
+            color: rgba(255,255,255,0.5);
+            padding: 0 20px;
+            font-size: 14px;
+        }
+        .discount-badge {
+            display: inline-block;
+            margin: 8px 20px;
+            padding: 4px 16px;
+            background: rgba(20,241,149,0.15);
+            color: #14F195;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .yacht-jet-card .btn-primary {
+            margin: 12px 20px 20px;
+            display: inline-block;
+        }
+
+        /* 3. CASINO VIP ACCESS */
+        .casino-vip {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .casino-vip-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 40px;
+        }
+        .vip-level {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .vip-icon { font-size: 32px; }
+        .vip-title {
+            font-size: 18px;
+            font-weight: 700;
+            flex: 1;
+        }
+        .vip-requirement {
+            font-size: 14px;
+            color: var(--mcf-gold);
+            font-weight: 600;
+        }
+        .casino-vip-image img {
+            width: 100%;
+            border-radius: 16px;
+        }
+
+        /* 4. LUXURY REAL ESTATE */
+        .real-estate {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .real-estate-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .property-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+        .property-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--mcf-gold);
+        }
+        .property-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        .property-info { padding: 20px; }
+        .property-info h4 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .property-price {
+            font-size: 20px;
+            color: var(--mcf-gold);
+            font-weight: 700;
+            margin: 4px 0;
+        }
+        .property-desc {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* 5. VIP EVENTS CALENDAR */
+        .vip-events {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .event-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 16px 20px;
+            transition: all 0.3s;
+        }
+        .event-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--mcf-gold);
+        }
+        .event-date {
+            text-align: center;
+            padding: 8px 12px;
+            background: rgba(201,168,76,0.1);
+            border-radius: 12px;
+            min-width: 60px;
+        }
+        .event-day {
+            display: block;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--mcf-gold);
+        }
+        .event-month {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+        }
+        .event-info { flex: 1; }
+        .event-info h4 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .event-info p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+        }
+        .event-link {
+            font-size: 13px;
+            color: var(--mcf-gold);
+            font-weight: 600;
+        }
+        .event-link:hover { color: var(--mcf-white); }
+
+        /* PARTNERS TICKER */
         .partners-ticker-wrap {
             position: relative;
             z-index: 2;
@@ -1217,59 +1462,6 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
-
-        /* ============================================================
-           PARTNERS LOGOS — БОЛЬШИЕ ССЫЛКИ
-           ============================================================ */
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            max-width: 1400px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .partner-card {
-            background: var(--glass);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 24px 20px;
-            text-align: center;
-            transition: all 0.4s;
-            cursor: pointer;
-        }
-        .partner-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--mcf-gold);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        .partner-card img {
-            height: 50px;
-            width: auto;
-            max-width: 100px;
-            object-fit: contain;
-            margin-bottom: 12px;
-            filter: grayscale(1) brightness(0.5);
-            transition: all 0.3s;
-        }
-        .partner-card:hover img {
-            filter: grayscale(0) brightness(1);
-        }
-        .partner-card h4 {
-            font-size: 14px;
-            font-weight: 600;
-            color: rgba(255,255,255,0.7);
-        }
-        .partner-card a {
-            display: inline-block;
-            margin-top: 8px;
-            font-size: 12px;
-            color: var(--mcf-gold);
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        .partner-card a:hover { color: var(--mcf-white); }
 
         /* FOOTER */
         .footer {
@@ -1427,7 +1619,11 @@
             .staking-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
             .price-stats { grid-template-columns: repeat(2, 1fr); }
-            .partners-grid { grid-template-columns: repeat(2, 1fr); }
+            .concierge-container { grid-template-columns: repeat(2, 1fr); }
+            .yacht-jet-grid { grid-template-columns: repeat(2, 1fr); }
+            .real-estate-grid { grid-template-columns: repeat(2, 1fr); }
+            .events-grid { grid-template-columns: repeat(2, 1fr); }
+            .casino-vip-container { grid-template-columns: 1fr; }
             .partners-ticker .partner-logo { height: 30px; max-width: 70px; }
         }
 
@@ -1447,7 +1643,11 @@
             .calc-grid { grid-template-columns: 1fr; }
             .price-stats { grid-template-columns: 1fr; }
             .calc-info { grid-template-columns: 1fr; }
-            .partners-grid { grid-template-columns: 1fr 1fr; }
+            .concierge-container { grid-template-columns: 1fr; }
+            .yacht-jet-grid { grid-template-columns: 1fr; }
+            .real-estate-grid { grid-template-columns: 1fr; }
+            .events-grid { grid-template-columns: 1fr; }
+            .casino-vip-container { grid-template-columns: 1fr; padding: 20px; }
             .language-selector { top: 44px; right: 10px; flex-wrap: wrap; padding: 4px 8px; }
             .lang-btn { font-size: 10px; padding: 2px 5px; }
             .ticker-wrap { height: 30px; }
@@ -1485,7 +1685,6 @@
 
         @media (max-width: 480px) {
             .hero-title { font-size: 30px; }
-            .partners-grid { grid-template-columns: 1fr 1fr; }
             .partners-ticker .partner-logo { height: 20px; max-width: 40px; }
             .partners-ticker { gap: 10px; animation-duration: 30s; }
         }
@@ -1553,6 +1752,11 @@
                 <li><a href="#tokenomics" class="nav-link">Tokenomics</a></li>
                 <li><a href="#ecosystem" class="nav-link">Ecosystem</a></li>
                 <li><a href="#whitepaper" class="nav-link">Whitepaper</a></li>
+                <li><a href="#concierge" class="nav-link">Concierge</a></li>
+                <li><a href="#yachtJet" class="nav-link">Yacht & Jet</a></li>
+                <li><a href="#casinoVip" class="nav-link">Casino VIP</a></li>
+                <li><a href="#realEstate" class="nav-link">Real Estate</a></li>
+                <li><a href="#vipEvents" class="nav-link">Events</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
@@ -2073,7 +2277,283 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- СТРАНИЦА 9: CONTACT                                       -->
+    <!-- СТРАНИЦА 9: PRIVATE BANKING CONCIERGE                    -->
+    <!-- ========================================================= -->
+    <section class="page" id="concierge">
+        <div class="page-header">
+            <h1>🏦 Private Banking Concierge</h1>
+            <p>Exclusive personal banking for MCF holders</p>
+        </div>
+        
+        <div class="concierge-container">
+            <div class="concierge-card">
+                <div class="concierge-icon">👑</div>
+                <h3>Diamond Tier</h3>
+                <p>1,000,000+ MCF</p>
+                <ul class="concierge-benefits">
+                    <li>✅ Personal banker 24/7</li>
+                    <li>✅ Wealth management consultation</li>
+                    <li>✅ Private jet & yacht booking</li>
+                    <li>✅ Exclusive Monte Carlo events</li>
+                    <li>✅ Priority at all partners</li>
+                </ul>
+                <a href="https://www.edmond-de-rothschild.com/" target="_blank" class="btn-primary">Activate</a>
+            </div>
+            <div class="concierge-card">
+                <div class="concierge-icon">💎</div>
+                <h3>Platinum Tier</h3>
+                <p>500,000+ MCF</p>
+                <ul class="concierge-benefits">
+                    <li>✅ Priority banking</li>
+                    <li>✅ Investment advisory</li>
+                    <li>✅ Luxury travel planning</li>
+                    <li>✅ VIP casino access</li>
+                    <li>✅ Restaurant reservations</li>
+                </ul>
+                <a href="https://www.edmond-de-rothschild.com/" target="_blank" class="btn-primary">Activate</a>
+            </div>
+            <div class="concierge-card">
+                <div class="concierge-icon">🥇</div>
+                <h3>Gold Tier</h3>
+                <p>100,000+ MCF</p>
+                <ul class="concierge-benefits">
+                    <li>✅ Preferred banking</li>
+                    <li>✅ Financial planning</li>
+                    <li>✅ Restaurant reservations</li>
+                    <li>✅ Event invitations</li>
+                    <li>✅ Exclusive discounts</li>
+                </ul>
+                <a href="https://www.edmond-de-rothschild.com/" target="_blank" class="btn-primary">Activate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- СТРАНИЦА 10: YACHT & JET BOOKING                         -->
+    <!-- ========================================================= -->
+    <section class="page" id="yachtJet">
+        <div class="page-header">
+            <h1>⛵ Yacht & Private Jet Booking</h1>
+            <p>Luxury travel with MCF — exclusive discounts</p>
+        </div>
+        
+        <div class="yacht-jet-grid">
+            <div class="yacht-jet-card">
+                <div class="yacht-jet-image" style="background-image: url('luxury-yacht.jpg');"></div>
+                <h3>Superyacht Charter</h3>
+                <p>Starting from $50,000/week</p>
+                <span class="discount-badge">🔥 10% off with MCF</span>
+                <a href="https://www.yacht-club-monaco.mc/" target="_blank" class="btn-primary">Book Now</a>
+            </div>
+            <div class="yacht-jet-card">
+                <div class="yacht-jet-image" style="background-image: url('monaco-f1.mp4');"></div>
+                <h3>Private Jet Hire</h3>
+                <p>Starting from $30,000/flight</p>
+                <span class="discount-badge">🔥 15% off with MCF</span>
+                <a href="https://www.monaco-helicopter.com/" target="_blank" class="btn-primary">Book Now</a>
+            </div>
+            <div class="yacht-jet-card">
+                <div class="yacht-jet-image" style="background-image: url('monaco-harbor.png');"></div>
+                <h3>Helicopter Tours</h3>
+                <p>Starting from $5,000/tour</p>
+                <span class="discount-badge">🔥 20% off with MCF</span>
+                <a href="https://www.monaco-helicopter.com/" target="_blank" class="btn-primary">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- СТРАНИЦА 11: CASINO VIP ACCESS                           -->
+    <!-- ========================================================= -->
+    <section class="page" id="casinoVip">
+        <div class="page-header">
+            <h1>🎰 Monte Carlo Casino VIP Access</h1>
+            <p>Exclusive gaming rooms with MCF</p>
+        </div>
+        
+        <div class="casino-vip-container">
+            <div class="casino-vip-info">
+                <div class="vip-level">
+                    <span class="vip-icon">👑</span>
+                    <span class="vip-title">Royal Suite</span>
+                    <span class="vip-requirement">1,000,000 MCF</span>
+                </div>
+                <div class="vip-level">
+                    <span class="vip-icon">💎</span>
+                    <span class="vip-title">Platinum Room</span>
+                    <span class="vip-requirement">500,000 MCF</span>
+                </div>
+                <div class="vip-level">
+                    <span class="vip-icon">🥇</span>
+                    <span class="vip-title">Gold Lounge</span>
+                    <span class="vip-requirement">100,000 MCF</span>
+                </div>
+                <div class="vip-level">
+                    <span class="vip-icon">🎰</span>
+                    <span class="vip-title">Private Tables</span>
+                    <span class="vip-requirement">50,000 MCF</span>
+                </div>
+                <div class="vip-level">
+                    <span class="vip-icon">🍾</span>
+                    <span class="vip-title">Champagne Bar</span>
+                    <span class="vip-requirement">25,000 MCF</span>
+                </div>
+            </div>
+            <div class="casino-vip-image">
+                <img src="monte-carlo-casino.jpeg" alt="Monte Carlo Casino">
+                <a href="https://www.casinomontecarlo.com/" target="_blank" class="btn-primary" style="margin-top:16px; display:inline-block;">Claim VIP Access</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- СТРАНИЦА 12: LUXURY REAL ESTATE                          -->
+    <!-- ========================================================= -->
+    <section class="page" id="realEstate">
+        <div class="page-header">
+            <h1>🏠 Luxury Real Estate Monaco</h1>
+            <p>Exclusive properties with MCF</p>
+        </div>
+        
+        <div class="real-estate-grid">
+            <div class="property-card">
+                <div class="property-image" style="background-image: url('monaco-city.jpg');"></div>
+                <div class="property-info">
+                    <h4>Penthouse Monte Carlo</h4>
+                    <p class="property-price">€25,000,000</p>
+                    <p class="property-desc">5 beds • 6 baths • 500m²</p>
+                    <a href="https://www.montecarlosothebysir.com/" target="_blank" class="btn-tertiary">View →</a>
+                </div>
+            </div>
+            <div class="property-card">
+                <div class="property-image" style="background-image: url('monaco-harbor.png');"></div>
+                <div class="property-info">
+                    <h4>Villa with Sea View</h4>
+                    <p class="property-price">€18,500,000</p>
+                    <p class="property-desc">4 beds • 5 baths • 400m²</p>
+                    <a href="https://www.montecarlosothebysir.com/" target="_blank" class="btn-tertiary">View →</a>
+                </div>
+            </div>
+            <div class="property-card">
+                <div class="property-image" style="background-image: url('monaco-aerial.jpg');"></div>
+                <div class="property-info">
+                    <h4>Luxury Apartment</h4>
+                    <p class="property-price">€12,000,000</p>
+                    <p class="property-desc">3 beds • 4 baths • 300m²</p>
+                    <a href="https://www.montecarlosothebysir.com/" target="_blank" class="btn-tertiary">View →</a>
+                </div>
+            </div>
+            <div class="property-card">
+                <div class="property-image" style="background-image: url('monaco-gardens.jpeg');"></div>
+                <div class="property-info">
+                    <h4>Garden Villa</h4>
+                    <p class="property-price">€9,500,000</p>
+                    <p class="property-desc">3 beds • 3 baths • 250m²</p>
+                    <a href="https://www.montecarlosothebysir.com/" target="_blank" class="btn-tertiary">View →</a>
+                </div>
+            </div>
+            <div class="property-card">
+                <div class="property-image" style="background-image: url('monaco-opera.jpeg');"></div>
+                <div class="property-info">
+                    <h4>Opera View Apartment</h4>
+                    <p class="property-price">€7,800,000</p>
+                    <p class="property-desc">2 beds • 3 baths • 180m²</p>
+                    <a href="https://www.montecarlosothebysir.com/" target="_blank" class="btn-tertiary">View →</a>
+                </div>
+            </div>
+            <div class="property-card">
+                <div class="property-image" style="background-image: url('monte-carlo-casino.jpeg');"></div>
+                <div class="property-info">
+                    <h4>Casino District Suite</h4>
+                    <p class="property-price">€6,200,000</p>
+                    <p class="property-desc">2 beds • 2 baths • 150m²</p>
+                    <a href="https://www.montecarlosothebysir.com/" target="_blank" class="btn-tertiary">View →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- СТРАНИЦА 13: VIP EVENTS CALENDAR                         -->
+    <!-- ========================================================= -->
+    <section class="page" id="vipEvents">
+        <div class="page-header">
+            <h1>📱 VIP Events Calendar</h1>
+            <p>Exclusive Monaco events — only for MCF holders</p>
+        </div>
+        
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="event-day">25</span>
+                    <span class="event-month">May</span>
+                </div>
+                <div class="event-info">
+                    <h4>Monaco Grand Prix</h4>
+                    <p>VIP box access</p>
+                    <a href="https://www.formula1.com/" target="_blank" class="event-link">Get Tickets →</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="event-day">12</span>
+                    <span class="event-month">June</span>
+                </div>
+                <div class="event-info">
+                    <h4>Monaco Yacht Show</h4>
+                    <p>Private viewing</p>
+                    <a href="https://www.monacoyachtshow.com/" target="_blank" class="event-link">Get Tickets →</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="event-day">8</span>
+                    <span class="event-month">July</span>
+                </div>
+                <div class="event-info">
+                    <h4>Monte Carlo Opera Gala</h4>
+                    <p>Front row seats</p>
+                    <a href="https://www.opera.mc/" target="_blank" class="event-link">Get Tickets →</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="event-day">14</span>
+                    <span class="event-month">August</span>
+                </div>
+                <div class="event-info">
+                    <h4>Red Cross Ball</h4>
+                    <p>VIP invitation</p>
+                    <a href="https://www.croix-rouge.mc/" target="_blank" class="event-link">Get Tickets →</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="event-day">20</span>
+                    <span class="event-month">September</span>
+                </div>
+                <div class="event-info">
+                    <h4>Monte Carlo Jazz Festival</h4>
+                    <p>Backstage access</p>
+                    <a href="https://www.opera.mc/" target="_blank" class="event-link">Get Tickets →</a>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="event-day">5</span>
+                    <span class="event-month">October</span>
+                </div>
+                <div class="event-info">
+                    <h4>Monaco Art Fair</h4>
+                    <p>Private viewing</p>
+                    <a href="https://www.grimaldiforum.com/" target="_blank" class="event-link">Get Tickets →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- СТРАНИЦА 14: CONTACT                                     -->
     <!-- ========================================================= -->
     <section class="page" id="contact">
         <div class="page-header">
@@ -2123,69 +2603,10 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- БЕГУЩАЯ СТРОКА ПАРТНЁРОВ (ЛОГОТИПЫ + ТЕКСТ)            -->
+    <!-- БЕГУЩАЯ СТРОКА ПАРТНЁРОВ (ЛОГОТИПЫ)                    -->
     <!-- ========================================================= -->
     <div class="partners-ticker-wrap">
         <div class="partners-ticker">
-            <!-- ЛОГОТИПЫ ПАРТНЁРОВ (реальные favicon) -->
-            <img src="https://www.edmond-de-rothschild.com/favicon.ico" alt="Edmond de Rothschild" class="partner-logo" title="Edmond de Rothschild">
-            <span class="partner-logo-text">Edmond de Rothschild</span>
-            <img src="https://www.casinomontecarlo.com/favicon.ico" alt="Monte Carlo Casino" class="partner-logo" title="Monte Carlo Casino">
-            <span class="partner-logo-text">Monte Carlo Casino</span>
-            <img src="https://www.montecarlosothebysir.com/favicon.ico" alt="Sotheby's Monaco" class="partner-logo" title="Sotheby's Monaco">
-            <span class="partner-logo-text">Sotheby's Monaco</span>
-            <img src="https://www.yacht-club-monaco.mc/favicon.ico" alt="Yacht Club Monaco" class="partner-logo" title="Yacht Club Monaco">
-            <span class="partner-logo-text">Yacht Club Monaco</span>
-            <img src="https://www.sbm.mc/favicon.ico" alt="SBM Group" class="partner-logo" title="SBM Group">
-            <span class="partner-logo-text">SBM Group</span>
-            <img src="https://www.bnpparibas.com/favicon.ico" alt="BNP Paribas" class="partner-logo" title="BNP Paribas">
-            <span class="partner-logo-text">BNP Paribas</span>
-            <img src="https://www.ubs.com/favicon.ico" alt="UBS" class="partner-logo" title="UBS">
-            <span class="partner-logo-text">UBS</span>
-            <img src="https://www.credit-suisse.com/favicon.ico" alt="Credit Suisse" class="partner-logo" title="Credit Suisse">
-            <span class="partner-logo-text">Credit Suisse</span>
-            <img src="https://www.jpmorgan.com/favicon.ico" alt="JPMorgan" class="partner-logo" title="JPMorgan">
-            <span class="partner-logo-text">JPMorgan</span>
-            <img src="https://www.goldmansachs.com/favicon.ico" alt="Goldman Sachs" class="partner-logo" title="Goldman Sachs">
-            <span class="partner-logo-text">Goldman Sachs</span>
-            <img src="https://www.hsbc.com/favicon.ico" alt="HSBC" class="partner-logo" title="HSBC">
-            <span class="partner-logo-text">HSBC</span>
-            <img src="https://www.lazard.com/favicon.ico" alt="Lazard" class="partner-logo" title="Lazard">
-            <span class="partner-logo-text">Lazard</span>
-            <img src="https://www.grimaldiforum.com/favicon.ico" alt="Grimaldi Forum" class="partner-logo" title="Grimaldi Forum">
-            <span class="partner-logo-text">Grimaldi Forum</span>
-            <img src="https://www.monaco-telecom.mc/favicon.ico" alt="Monaco Telecom" class="partner-logo" title="Monaco Telecom">
-            <span class="partner-logo-text">Monaco Telecom</span>
-            <img src="https://www.opera.mc/favicon.ico" alt="Monte Carlo Opera" class="partner-logo" title="Monte Carlo Opera">
-            <span class="partner-logo-text">Monte Carlo Opera</span>
-            <img src="https://www.gouv.mc/favicon.ico" alt="Monaco Government" class="partner-logo" title="Monaco Government">
-            <span class="partner-logo-text">Monaco Government</span>
-            <img src="https://www.visitmonaco.com/favicon.ico" alt="Monaco Tourism" class="partner-logo" title="Monaco Tourism">
-            <span class="partner-logo-text">Monaco Tourism</span>
-            <img src="https://www.monacoyachtshow.com/favicon.ico" alt="Monaco Yacht Show" class="partner-logo" title="Monaco Yacht Show">
-            <span class="partner-logo-text">Monaco Yacht Show</span>
-            <img src="https://www.chpg.mc/favicon.ico" alt="Princess Grace Hospital" class="partner-logo" title="Princess Grace Hospital">
-            <span class="partner-logo-text">Princess Grace Hospital</span>
-            <img src="https://www.montecarlobeach.com/favicon.ico" alt="Monte Carlo Beach" class="partner-logo" title="Monte Carlo Beach">
-            <span class="partner-logo-text">Monte Carlo Beach</span>
-            <img src="https://www.formula1.com/favicon.ico" alt="Monaco Grand Prix" class="partner-logo" title="Monaco Grand Prix">
-            <span class="partner-logo-text">Monaco Grand Prix</span>
-            <img src="https://www.golfmontecarlo.com/favicon.ico" alt="Monte Carlo Golf" class="partner-logo" title="Monte Carlo Golf">
-            <span class="partner-logo-text">Monte Carlo Golf</span>
-            <img src="https://www.asmonaco.basketball/favicon.ico" alt="Monaco Basket" class="partner-logo" title="Monaco Basket">
-            <span class="partner-logo-text">Monaco Basket</span>
-            <img src="https://www.asmonaco.com/favicon.ico" alt="Monaco Football" class="partner-logo" title="Monaco Football">
-            <span class="partner-logo-text">Monaco Football</span>
-            <img src="https://www.montecarlotv.com/favicon.ico" alt="Monte Carlo TV" class="partner-logo" title="Monte Carlo TV">
-            <span class="partner-logo-text">Monte Carlo TV</span>
-            <img src="https://www.radioriviera.mc/favicon.ico" alt="Monaco Radio" class="partner-logo" title="Monaco Radio">
-            <span class="partner-logo-text">Monaco Radio</span>
-            <img src="https://www.opmc.mc/favicon.ico" alt="Monaco Philharmonic" class="partner-logo" title="Monaco Philharmonic">
-            <span class="partner-logo-text">Monaco Philharmonic</span>
-            <img src="https://www.balletsdemontecarlo.com/favicon.ico" alt="Monaco Dance" class="partner-logo" title="Monaco Dance">
-            <span class="partner-logo-text">Monaco Dance</span>
-
-            <!-- ПОВТОР ДЛЯ БЕСКОНЕЧНОСТИ -->
             <img src="https://www.edmond-de-rothschild.com/favicon.ico" alt="Edmond de Rothschild" class="partner-logo" title="Edmond de Rothschild">
             <span class="partner-logo-text">Edmond de Rothschild</span>
             <img src="https://www.casinomontecarlo.com/favicon.ico" alt="Monte Carlo Casino" class="partner-logo" title="Monte Carlo Casino">
@@ -2270,6 +2691,11 @@
                 <a href="#staking">💰 Staking</a>
                 <a href="#tokenomics">📊 Tokenomics</a>
                 <a href="#whitepaper">📄 Whitepaper</a>
+                <a href="#concierge">🏦 Concierge</a>
+                <a href="#yachtJet">⛵ Yacht & Jet</a>
+                <a href="#casinoVip">🎰 Casino VIP</a>
+                <a href="#realEstate">🏠 Real Estate</a>
+                <a href="#vipEvents">📱 Events</a>
             </div>
             <div class="footer-col">
                 <h4>Resources</h4>
@@ -2679,7 +3105,8 @@
         console.log('💧 Liquidity: $67.36M');
         console.log('📊 Market Cap: $152.53M');
         console.log('🤝 Partners: 30+ elite Monaco companies');
+        console.log('💎 5 Unique Functions for wealthy residents');
     </script>
 
 </body>
-    </html>
+</html>

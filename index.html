@@ -591,6 +591,23 @@
                 <li><strong>Liquidity:</strong> $67.36M</li>
             </ul>
             
+            <h3>🏛️ Ecosystem</h3>
+            <ul>
+                <li><strong>Private Banking:</strong> Edmond de Rothschild Monaco</li>
+                <li><strong>Real Estate:</strong> Sotheby's Monaco</li>
+                <li><strong>Yachts:</strong> Yacht Club de Monaco</li>
+                <li><strong>Entertainment:</strong> Monte Carlo Casino</li>
+            </ul>
+            
+            <h3>🗺️ Roadmap</h3>
+            <ul>
+                <li><strong>Q2 2024:</strong> Token creation and launch</li>
+                <li><strong>Q3 2024:</strong> Meteora listing and liquidity</li>
+                <li><strong>Q4 2024:</strong> CoinGecko and CoinMarketCap</li>
+                <li><strong>Q1 2025:</strong> Ecosystem expansion</li>
+                <li><strong>Q2 2025:</strong> International recognition</li>
+            </ul>
+            
             <div class="whitepaper-download">
                 <a href="whitepaper.pdf" class="btn-primary" download>⬇️ Download Whitepaper (PDF)</a>
                 <span>Version 1.0 — July 2026</span>
@@ -672,6 +689,7 @@
                 <a href="#calculator">Calculator</a>
                 <a href="#staking">Staking</a>
                 <a href="#tokenomics">Tokenomics</a>
+                <a href="#whitepaper">Whitepaper</a>
             </div>
             <div class="footer-col">
                 <h4>Resources</h4>
@@ -718,7 +736,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- ========================================================= -->
-    <!-- СКРИПТЫ (ВСЁ В ОДНОМ ФАЙЛЕ)                              -->
+    <!-- СКРИПТЫ                                                   -->
     <!-- ========================================================= -->
     <script>
         // =========================================================
@@ -778,16 +796,14 @@
             const mcfOutput = document.getElementById('mcfOutput');
             const price = 0.01525;
             
-            // Обновление MCF при вводе USDC
-            if (usdcInput) {
+            if (usdcInput && mcfOutput) {
                 usdcInput.addEventListener('input', function() {
                     const usdc = parseFloat(this.value) || 0;
                     const mcf = usdc / price;
-                    if (mcfOutput) mcfOutput.textContent = mcf.toLocaleString(undefined, {maximumFractionDigits: 0});
+                    mcfOutput.textContent = mcf.toLocaleString(undefined, {maximumFractionDigits: 0});
                 });
             }
             
-            // Подключение кошелька
             if (connectBtn) {
                 connectBtn.addEventListener('click', async function() {
                     if (window.solana && window.solana.isPhantom) {
@@ -810,7 +826,6 @@
                 });
             }
             
-            // Кнопка покупки
             if (buyBtn) {
                 buyBtn.addEventListener('click', function() {
                     if (!window.solana || !window.solana.isPhantom) {
@@ -844,7 +859,7 @@
         });
 
         // =========================================================
-        // 4. LIVE PRICE — ОБНОВЛЕНИЕ ЦЕНЫ В РЕАЛЬНОМ ВРЕМЕНИ
+        // 4. LIVE PRICE — ОБНОВЛЕНИЕ ЦЕНЫ
         // =========================================================
         function updatePrice() {
             const basePrice = 0.01525;
@@ -867,7 +882,7 @@
         setInterval(updatePrice, 5000);
 
         // =========================================================
-        // 5. CALCULATOR — КАЛЬКУЛЯТОР
+        // 5. CALCULATOR
         // =========================================================
         document.addEventListener('DOMContentLoaded', function() {
             const calcUsdc = document.getElementById('calcUsdc');
@@ -888,7 +903,7 @@
         }
 
         // =========================================================
-        // 6. STAKING — КАЛЬКУЛЯТОР СТЕЙКИНГА
+        // 6. STAKING CALCULATOR
         // =========================================================
         function updateStaking() {
             const amount = parseFloat(document.getElementById('stakeAmount')?.value) || 0;
@@ -910,7 +925,7 @@
         }
 
         // =========================================================
-        // 7. COPY ADDRESS — КОПИРОВАНИЕ АДРЕСА
+        // 7. COPY ADDRESS
         // =========================================================
         function copyAddress() {
             const addr = '33r46gDzoXfYijXWS4JgWcUcPWbTGphBnJGnApW77fsX';
@@ -936,7 +951,7 @@
         }
 
         // =========================================================
-        // 8. NAVIGATION — ПЕРЕКЛЮЧЕНИЕ СТРАНИЦ
+        // 8. NAVIGATION
         // =========================================================
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-links a');
@@ -952,7 +967,6 @@
                     const target = document.getElementById(targetId);
                     if (target) target.classList.add('active');
                     
-                    // Закрыть мобильное меню
                     const mobileMenu = document.querySelector('.nav-links');
                     if (mobileMenu) mobileMenu.classList.remove('active');
                     const menuBtn = document.getElementById('mobileMenuBtn');
@@ -962,7 +976,6 @@
                 });
             });
             
-            // Мобильное меню
             const menuBtn = document.getElementById('mobileMenuBtn');
             if (menuBtn) {
                 menuBtn.addEventListener('click', function() {
@@ -972,7 +985,6 @@
                 });
             }
             
-            // Кнопка наверх
             const scrollBtn = document.getElementById('scrollTopBtn');
             window.addEventListener('scroll', function() {
                 if (scrollBtn) {
@@ -986,7 +998,7 @@
         }
 
         // =========================================================
-        // 9. CHART — ГРАФИК (МИНИ)
+        // 9. CHART
         // =========================================================
         document.addEventListener('DOMContentLoaded', function() {
             const ctx = document.getElementById('fullPriceChart');
@@ -1032,7 +1044,7 @@
         });
 
         // =========================================================
-        // 10. LANGUAGE — 8 ЯЗЫКОВ (ПРОСТОЙ ПРИМЕР)
+        // 10. LANGUAGE — 8 ЯЗЫКОВ
         // =========================================================
         document.addEventListener('DOMContentLoaded', function() {
             const langBtns = document.querySelectorAll('.lang-btn');
